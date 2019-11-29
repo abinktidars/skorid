@@ -1,0 +1,41 @@
+<div class="latest ga--latest mt2 clearfix">
+	{{!indeks}}
+	{{!#withFirst Latest 10}}
+	{{#each WP.Latest}}
+	{{#gte @index compare=../index_start}}
+	{{#gte @index compare=../index_end}}
+	{{else}}
+	<div class="article__list {{#eq subtitle compare="Sponsored by OPPO"}}kcm__list__stickyy {{/eq}}clearfix">
+		<div class="article__list__asset clearfix">
+			{{#if duration}}
+			<div class="article__time article__time--fixed">{{duration}}</div>
+			{{/if}}
+			{{#eq @index compare=1}}
+			<div class="jeo__logo__article"><img src="./asset/images/jeo-logo.png" alt=""></div>
+			{{/eq}}
+			<div class="article__asset">
+				<a href="{{link}}">	
+					<img src="https://asset.kompas.com/crop/0x0:0x0/177x117/data/photo/{{img}}" alt="{{title}}" />
+				</a>
+			</div>
+		</div>
+		<div class="article__list__title">
+			<h3 class="article__title article__title--medium">
+				<a class="article__link" href="{{link}}">{{title}}</a>
+			</h3>
+		</div>
+		<div class="article__list__info">
+			<div class="article__subtitle article__subtitle--inline{{#eq ads compare=1}} color--brandzview{{/eq}}">
+				<a href="#">{{subtitle}}</a>
+			</div>
+			<div class="article__date">{{dates}}</div>
+		</div>
+		<!-- option -->
+		{{!> comp_option}}
+		<div class="clearfix"></div>
+	</div>
+	{{/gte}}
+	{{else}}
+	{{/gte}}
+	{{/each}}
+</div>

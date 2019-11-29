@@ -1,0 +1,24 @@
+<div class="most ga--most mt1 clearfix">
+	<div class="title clearfix {{#eq ./page compare="edukasi"}}{{else}}title--center{{/eq}}">
+		<h2 class="title__content">Terpopuler</h2>
+	</div>
+	<div class="most__wrap clearfix">
+		{{#each Most}}
+		{{#gt @index compare=../jumlah}}
+		{{else}}
+		<div class="most__list {{#eq ../page compare="opini"}}most__list--opinion {{/eq}}clearfix">
+			<div class="most__count">{{add @index 1}}</div>
+			{{#eq ../page compare="opini"}}
+			<a class="opinion__link" href="#">
+				<div class="opinion__author">{{author}}</div>
+			</a>
+			{{/eq}}
+			<a class="most__link" href="artikel.html">
+				<h4 class="most__title">{{title}}</h4>
+				<div class="most__read">Dibaca 23.455 kali</div>
+			</a>
+		</div>
+		{{/gt}}
+		{{/each}}
+	</div>
+</div>

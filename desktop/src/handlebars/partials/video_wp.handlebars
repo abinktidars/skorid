@@ -1,0 +1,29 @@
+<div class="latest ga--video mt2 clearfix">
+	{{#each WP.Video}}
+	{{#gte @index compare=../index_start}}
+	{{#gte @index compare=../index_end}}
+	{{else}}
+	<div class="article__list article__list--video clearfix">
+		<div class="article__list__asset clearfix">
+			<iframe width="100%" height="320" src="{{img}}" scrolling="no" frameborder="0" allowtransparency="true"></iframe>
+		</div>
+		<div class="article__list__title">
+			<h3 class="article__title article__title--medium">
+				<a class="article__link" href="tv-artikel.html">{{title}}</a>
+			</h3>
+		</div>
+		<div class="article__list__info">
+			<div class="article__time"> 
+				<svg class="icon icon-time" title="icon-time">
+					<use xlink:href="#icon-time"/>
+				</svg>{{duration}}
+			</div>
+			<div class="article__date">26/11/2016, 08:31 WIB</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	{{/gte}}
+	{{else}}
+	{{/gte}}
+	{{/each}}
+</div>

@@ -1,0 +1,50 @@
+.footer {
+	margin-top: 50px;
+	padding: 20px 0 70px;
+	background: #000;
+	color: #fff;
+	border-top: 4px solid $color-kcm-blue;
+    width: $screen-lg-desktop;
+    @include min-responsive($screen-lg-desktop) {
+        width: 100%;
+    }
+	&__top {
+		padding: 10px 0 30px;
+	}
+	&__bottom {
+		border-top: 1px solid #2b2b2b;
+		padding: 30px 0 10px;
+		color: #b1b1b1;
+	}
+	&__menu {
+		position: relative;
+		&__item {
+			position: relative;
+			display: block;
+			padding: 3px 0;
+			&--inline {
+				padding: 0;
+				display: inline-block;
+				&:after {
+					content: ' -';
+				}
+				&:last-child {
+					&:after {
+						content: '';
+					}
+				}
+			}
+		}
+		&__link {
+			&:hover {
+				color: $color-kcm-blue;
+			}
+		}
+	}
+	&__copy {
+		padding: 5px 0;
+		a:hover {
+			color: $color-kcm-blue;
+		}
+	}
+}

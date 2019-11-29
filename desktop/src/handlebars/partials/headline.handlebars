@@ -1,0 +1,35 @@
+<div class="headline ga--headline clearfix">
+	<!-- headline big -->
+	<div class="headline__big clearfix">
+		<ul class="headline__big__row clearfix js-hl-big">
+			{{#each WP.Headline}}
+			<li class="headline__big__item">
+				<a href="{{link}}" class="headline__big__link">
+					<div class="headline__big__img">
+						<img src="{{img}}" alt="{{title}}">
+					</div>
+					<div class="headline__big__box">
+						<h2 class="headline__big__title">{{title}}</h2>
+						<div class="headline__big__date">{{dates}}</div>
+					</div>
+				</a>
+			</li>
+			{{/each}}
+		</ul>
+		<!-- headline thumb -->
+		<div class="headline__thumb clearfix">
+			<ul class="headline__thumb__row clearfix js-hl-thumb">
+				{{#each WP.Headline}}
+				<li class="headline__thumb__item">
+					<div class="headline__thumb__img">
+						<img src="{{img}}" alt="{{title}}">
+						<div class="headline__thumb__link">
+							<h2 class="headline__thumb__title">{{title}}</h2>
+						</div>
+					</div>
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+	</div>
+</div>

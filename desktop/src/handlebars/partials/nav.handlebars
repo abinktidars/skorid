@@ -1,0 +1,46 @@
+{{!--
+
+Menu Kompascom, terdiri dari 3 level menu.
+
+Menu Utama :
+	Class khusus :
+	- nav__link--{{nama_kanal}}--active			Penanda khusus untuk menu aktif, kondisi aktifnya dibandingkan dengan nilai 'title' di JSON
+	- nav__link--new 							Penanda khusus untuk menu baru, kondisi aktifnya dibandingkan data JSON dg nama fieldnya adalah 'new' tipe boelan 1
+		
+Sub Menu (Level 2) 
+	Class khusus :
+	- nav__sublink--hot							Penanda khusus submenu yg ingin dihighlight, 
+												biasanya digunakan redaksi untuk menandakan bahwa 
+												submenu itu adalah iklan dan topil, kondisi aktifnya dibandingkan data JSON dg nama field adalah 'ads' tipe boelan 1
+
+--}}
+<ul class="nav__row clearfix">
+	{{! menu utama }}
+	{{#each kanal}}
+	<li class="nav__item">
+		<a href="{{link}}" class="nav__link nav__link--{{lowercase title}}{{#eq title compare=../active}} nav__link--{{lowercase title}}--active{{/eq}}{{#eq new compare=1}} nav__link--new{{/eq}}">{{title}}</a>
+		{{! s: menu level 2 }}
+		{{#if submenu}}
+		<ul class="nav__sub nav__sub--{{lowercase title}}">
+			{{#each submenu}}
+			<li class="nav__subitem">
+				<a href="{{link}}" class="nav__sublink{{#eq ads compare=1}} nav__sublink--hot{{/eq}}">{{title}}</a>
+				{{! s: menu level 3 }}
+				{{#if subsubmenu}}
+				<ul class="nav__subsub">
+					{{#each subsubmenu}}
+					<li class="nav__subitem">
+						<a href="{{link}}" class="nav__subsublink">{{title}}</a>
+					</li>
+					{{/each}}
+				</ul>
+				{{/if}}
+				{{! e: menu level 3 }}
+			</li>
+			{{/each}}
+		</ul>
+		{{/if}}
+		{{! e: menu level 2 }}
+	</li>
+	{{/each}}
+</ul>

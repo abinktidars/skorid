@@ -1,0 +1,46 @@
+.latest {
+	// &__grid {
+	// 	&--flex {
+	// 		display: block;
+	// 		// display: -webkit-box;
+	// 		// display: -moz-box;
+	// 		// display: -ms-flexbox;
+	// 		// display: -webkit-flex;
+	// 		// display: flex;
+	// 		@include display-flex();
+	// 		flex-wrap: wrap;
+	// 		-webkit-flex-flow: wrap;
+	// 	}
+	// }
+	&__wrap {
+		margin: 0 0 20px;
+		position: relative;
+		&:after {
+			content: '';
+			position: absolute;
+			border-bottom: 1px solid #dfdfdf;
+			width: 100%;
+			bottom: 0;
+			z-index: -1;
+		}
+	}
+	&__asset {
+		width: 197px;
+		float: left;
+		padding-right: 20px;
+		background: #fff;
+		z-index: 1;
+		position: relative;
+	}
+	&__title {
+		height: 88px;
+		overflow: hidden;
+		margin-bottom: 2px;
+	}
+	// &--topic {
+	// 	border-bottom: 1px solid #dfdfdf;
+	// 	&:last-child {
+	// 		border-bottom: none;
+	// 	}
+	// }
+}

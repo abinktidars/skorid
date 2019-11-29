@@ -1,0 +1,61 @@
+.opinion {
+	position: relative;
+	&__list {
+		position: relative;
+		// border-bottom: 1px solid #dfdfdf;
+		// margin-bottom: 20px;
+		padding: 15px 0 15px 120px;
+		// min-height: 135px;
+		height: 167px;
+	}
+	&--pull-left {
+		position: absolute;
+		left: 0;
+		top: 15px;
+		z-index: 1;
+		&--small {
+			top: 0;
+		}
+	}
+	&__asset {
+		width: 100px;
+		height: 100px;
+		overflow: hidden;
+		border-radius: 50px;
+		// float: left;
+		// margin-right: 20px;
+		&--small {
+			width: 45px;
+			height: 45px;
+		}
+		&--medium {
+			width: 150px;
+			height: 150px;
+			border-radius: 100px;
+		}
+		&--center {
+			margin: 0 auto 10px;
+		}
+	}
+	&__author {
+		@include font-pack(false, 14px, 700, false, $color-kcm-blue);
+		// margin-bottom: 10px;
+	}
+	&__authortitle {
+		@include font-pack(false, 12px, false, false, #9B9B9B);
+		margin-bottom: 5px;
+		margin-top: 1px;
+	}
+	&__title {
+		@include font-pack(false, 16px, 300, false, #4A4A4A);
+		height: 83px;
+		overflow: hidden;
+		// margin-bottom: 10px;
+	}
+	&__link {
+		display: block;
+		&:hover {
+			color: #000;
+		}
+	}
+}

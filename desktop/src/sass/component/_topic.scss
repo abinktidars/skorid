@@ -1,0 +1,45 @@
+.topic {
+	&__row {
+		border-bottom: 1px solid #dfdfdf;
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+	&__title {
+		position: relative;
+		// text-align: center;
+		padding: 5px 0;
+		text-transform: uppercase;
+		@include font-pack(false, 21px, 700, false, false);
+	}
+	&__teaser {
+		padding: 5px 0;
+		margin-bottom: 20px;
+		@include font-pack(false, false, false, false, false);
+	}
+	&__img {
+		margin-bottom: 30px;
+	}
+	&--lipsus {
+		.topic__title {
+			padding: 10px 0;
+		}
+	}
+}
+
+.indeks {
+	&__form {
+		padding: 20px 0;
+		// background: #fff;
+	}
+}
+
+.partner {
+	&__title {
+		padding: 5px 0;
+		@include font-pack(false, 12px, 300, false, false);
+	}
+	&__img {
+		margin-bottom: 10px;
+	}
+}

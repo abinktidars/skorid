@@ -1,0 +1,101 @@
+{{!--
+
+Variable page adalah variable global yang membedakan render antara halaman WP dengan halaman lainnya. 
+Jika varible tersebut tidak diisi, maka treatment include asset (css/js/dll) akan default seperti kanal.
+Pilihan halaman yang tersedia sampai saat ini adalah :
+
+page="wp" 				halaman wp
+page="news"				halaman kanal, bisa di isi dengan nama kanal, misalnya news, ekonomi, tekno, dll.
+page="inside"			halaman inside kompascom, misalnya about us, jobs, dll
+page="inside-detail"	halaman detail inside kompascom, misalnya pedoman siber, policy, dll
+page="404"				halaman 404
+page="suratpembaca"		halaman surat pembaca
+
+Lihat Artwork
+Klik artwork untuk melihat profil artist.
+
+--}} 
+
+<!DOCTYPE html>
+<html lang="en">
+	{{> head page="wp"}}
+
+<body>
+	<!-- header -->
+	{{> header page="wp"}}
+
+	<!-- ads skin -->
+	{{> ads_skin}}
+	<div class="headline__belt"></div>
+	<!-- container -->
+	<div class="container clearfix z1">
+
+		<!-- ads top -->
+		{{> ads_top}}
+		
+		<!-- row headline -->
+		<div class="pure-g mt2">
+			<div class="pure-u-1 pure-u-md-7-10">
+			
+				<!-- headline -->
+				{{> headline}}
+				
+			</div>
+			<div class="pure-u-1 pure-u-md-3-10">
+			
+				<!-- ads giant -->
+				{{> ads_giant}}
+				
+			</div>
+		</div>
+		
+		<!-- row highlight -->
+		<div class="pure-g mt2">
+			<div class="pure-u-1 pure-u-md-7-10">
+			
+				<!-- sorotan -->
+				<div class="title clearfix">
+					<div class="title__content">Sorotan</div>
+				</div>
+				{{> sorotan}}
+
+				<!-- terkini -->
+				<div class="title clearfix">
+					<div class="title__content">Berita Terkini</div>
+					<a class="button button--default button--title pull-right" href="indeks-berita.html">Lihat Semua</a>
+				</div>
+				{{> latest total=4 index_start=0 index_end=3}}
+				
+				<!-- video kompastv -->
+				{{> video_wp total=1 index_start=0 index_end=1}}
+				
+				<!-- terkini -->
+				{{> latest total=3 index_start=3 index_end=5}}
+				
+			</div>
+			<div class="pure-u-1 pure-u-md-3-10">
+			
+				<!-- harian kompas -->
+				<div class="title clearfix title--center">
+					<div class="title__content">Skor.id</div>
+				</div>
+				
+				<!-- kcm rectangle -->
+				{{> ads_rectangle}}
+				
+				<!-- terpopuler -->
+				{{> most index_end=10}}
+				
+			</div>
+		</div>
+		<!-- kcm horizontal -->
+		{{!> ads_horizontal}}
+
+	</div>
+
+	<!-- footer -->
+	{{> footer}}
+	
+	{{> js page="wp"}}
+</body>
+</html>

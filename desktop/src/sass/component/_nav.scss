@@ -1,0 +1,321 @@
+.nav {
+	position: relative;
+    border-top: 1px solid #383838;
+    background: #000;
+    z-index: 999;
+	&__wrap {
+		position: relative;
+        text-align: center;
+        z-index: 2;
+        // border-left: 1px solid #383838;
+        // border-right: 1px solid #383838;
+	}
+    &__row {
+        position: relative;
+        
+        display: block;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+
+        -webkit-flex-flow: row wrap;
+        justify-content: space-between;
+
+    }
+    &__sub {
+        // display: none;
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        top: 40px;
+        text-align: left;
+        z-index: 1;
+        width: 230px;
+        background: #212121;
+        padding: 10px 10px 20px;
+        // -webkit-transform: translate3d(0, -5px, 0);
+        // transform: translate3d(0, -5px, 0);
+        @include transition(all .4s ease-in-out);
+        &--news {
+            width: 320px;
+        }
+        // &--entertainment {
+        //     width: 180px;
+        // }
+        &--sains {
+            width: 200px;
+        }
+        &--entertainment {
+            width: 260px;
+        }
+        &--otomotif {
+            width: 260px;
+            // .nav__subitem {
+            //     width: 32.333%!important;
+            // }
+        }
+        &--lifestyle {
+            width: 160px;
+            .nav__subitem {
+                width: 100%!important;
+            }
+        }
+        &--travel {
+            width: 300px;
+        }
+        &--properti {
+            width: 280px;
+        }
+        &--images {
+            width: 140px;
+            .nav__subitem {
+                width: 100%!important;
+            }
+        }
+        &--tv {
+            width: 310px;
+        }
+    }
+    &__item {
+        display: inline-block;
+        position: relative;
+        // float: left;
+        &:hover {
+            .nav__link {
+                background: #212121;
+            }
+            .nav__sub {
+                // display: block;
+                top: 46px;
+                // -webkit-transform: translate3d(0, 0, 0);
+                // transform: translate3d(0, 0, 0);
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+        &:nth-of-type(11),
+        &:nth-of-type(12),
+        &:nth-of-type(13),
+        &:nth-of-type(14),
+        &:nth-of-type(15),
+        &:nth-of-type(16),
+        &:nth-of-type(17) {
+            .nav__sub {
+                left: auto;
+                right: 0;
+            }
+        }
+    }
+    &__subitem {
+        display: inline-block;
+        width: 48%;
+        vertical-align: top;
+    }
+    &__sublink {
+        display: block;
+        padding: 5px 10px;
+        text-transform: uppercase;
+        @include font-pack($font_body2, 13px, 700, 1, #fff);
+        &--hot,
+        &:hover {
+            color: $color-kcm-blue-light;
+        }
+    }
+    &__subsub {
+        padding: 3px 0 0;
+        position: relative;
+        .nav__subitem {
+            width: 100%!important;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 5px;
+            height: 91%;
+            border-left: 1px solid #666;
+        }
+    }
+    &__subsublink {        
+        display: block;
+        padding: 2px 10px 2px 20px;
+        text-transform: uppercase;
+        position: relative;
+        @include font-pack($font_body2, 12px, 300, 1, #fff);
+        &:hover {
+            color: $color-kcm-blue-light;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 7px;
+            width: 5px;
+            border-top: 1px solid #666;
+        }
+    }
+    &__link {
+        @include font-pack($font_body2, 14px, 700, false, #fff);
+        display: block;
+        // padding: 17px 12px;
+        padding: 14px 10px;
+        text-transform: uppercase;
+        position: relative;
+        // color: #fff;
+        &--new {
+            &:after {
+                content: "NEW";
+                position: absolute;
+                top: 6px;
+                right: -6px;
+                // width: 7px;
+                // height: 7px;
+                background: #f00;
+                border-radius: 20px;
+                padding: 0px 3px;
+                z-index: 1;
+                @include font-pack($font_body2, 9px, 300, false, #fff);
+            }
+            // &:after {
+            //     content: "";
+            //     position: absolute;
+            //     top: 12px;
+            //     right: 3px;
+            //     width: 7px;
+            //     height: 7px;
+            //     background: #e55225;
+            //     border-radius: 20px;
+            //     z-index: 1;
+            // }
+        }
+        &--dark {
+            background: #A6A6A6;
+        }
+        &:hover {
+            color: $color-kcm-news;
+            background: #1b1b1b;
+        }
+        // &--active {
+        //     color: $color-kcm-blue-light;
+        //     // color: #000;
+        // }
+        &--news {
+            &--active,
+            &:hover {
+                // background: #1b1b1b;
+                color: $color-kcm-news;
+            }
+        }
+        &--ekonomi {
+            &--active,
+            &:hover {
+                // background: #1b1b1b;
+                color: $color-kcm-ekonomi;
+            }
+        }
+        
+        &--money {
+            &--active,
+            &:hover {
+                // background: #1b1b1b;
+                color: #438E10;
+            }
+        }
+        &--bola {
+            &--active,
+            &:hover {
+                // background: #1b1b1b;
+                color: $color-kcm-bola;
+            }
+        }
+        &--entertainment {
+            &--active,
+            &:hover {
+                // background: #1b1b1b;
+                color: $color-kcm-entertainment;
+            }
+        }
+        &--tekno {
+            &--active,
+            &:hover {
+                // background: #1b1b1b;
+                color: $color-kcm-tekno;
+            }
+        }
+        &--otomotif {
+            &--active,
+            &:hover {
+                // background: #1b1b1b;
+                color: $color-kcm-otomotif;
+            }
+        }
+        &--sains {
+            &--active,
+            &:hover {
+                // background: #1b1b1b;
+                color: $color-kcm-sains;
+            }
+        }
+        &--lifestyle {
+            &--active,
+            &:hover {
+                // background: #1b1b1b;
+                color: $color-kcm-lifestyle;
+            }
+        }
+        &--properti {
+            &--active,
+            &:hover {
+                // background: #1b1b1b;
+                color: $color-kcm-properti;
+            }
+        }
+        &--travel {
+            &--active,
+            &:hover {
+                // background: #1b1b1b;
+                color: $color-kcm-travel;
+            }
+        }
+        &--edukasi {
+            &--active,
+            &:hover {
+                // background: #1b1b1b;
+                color: $color-kcm-edukasi;
+            }
+        }
+        &--opini,
+        &--kolom {
+            &--active,
+            &:hover {
+                // background: #1b1b1b;
+                color: $color-kcm-opini;
+            }
+        }
+        &--images {
+            &--active,
+            &:hover {
+                // background: #1b1b1b;
+                color: $color-kcm-lensa;
+            }
+        }
+        &--tv {
+            &--active,
+            &:hover {
+                // background: #1b1b1b;
+                color: $color-kcm-tv;
+            }
+        }
+        &--jeo,
+        &--vik {
+            &--active,
+            &:hover {
+                // background: #1b1b1b;
+                color: $color-kcm-vik;
+            }
+    	}
+    }
+}

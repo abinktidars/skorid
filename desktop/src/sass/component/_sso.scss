@@ -1,0 +1,37 @@
+.sso {
+	position: relative;
+	&__header {
+		position: relative;
+		padding: 11px 10px;
+		// text-align: center;
+		text-align: right;
+		display: inline-block;
+		width: auto;
+		float: right;
+	}
+	&__item {
+		display: inline-block;
+		@include font-pack(false, 12px, 900, 1, $color-kcm-orange-light);
+		&:after {
+			content: ' | ';
+		}
+		&:last-child {
+			&:after {
+				content: '';
+			}
+		}
+	}
+	&__link {
+		display: inline-block;
+		text-transform: uppercase;
+		padding: 0 4px;
+		max-width: 150px;
+		height: 12px;
+		overflow: hidden;
+		width: auto;
+		word-break: break-all;
+		&:hover {
+			color: #fff;
+		}
+	}
+}

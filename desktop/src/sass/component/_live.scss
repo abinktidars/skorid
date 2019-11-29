@@ -1,0 +1,150 @@
+.live {
+	&__subtitle {
+		&--superbig {
+			top: 13px;
+			width: 90%;
+			right: 10%;
+			text-align: right;
+			padding: 20px 20px 10px 35px;
+			background: #fff;
+			@include font-pack(false, 50px, 200, false, $color-kcm-orange);
+			&:after {
+				width: 20px;
+				height: 20px;
+				left: 30px;
+				top: 40px;
+				background: $color-kcm-orange;
+			}
+		}		
+	}
+	// live page
+	&__header {
+		background: #000;
+		padding: 20px 0;
+		margin: 0 0 30px;
+		.read__title {
+			margin: 0 0 15px;
+			@include font-pack(false, 50px, false, false, #fff);
+		}
+		.read__time {
+			@include font-pack(false, 13px, false, false, #f0f0f0);
+		}
+	}
+	&__lead {
+		padding: 20px 0 10px;
+		@include font-pack(false, 16px, 300, false, #fff);
+	}
+	&__item {
+		padding: 0 15px 10px;
+		margin: 0 0 20px;
+		border-top: 1px solid #9b9b9b;
+		background: #f0f0f0;
+	}
+	&__asset {
+		margin: 0 -15px 10px;
+		&--big {
+			margin: 0 -15px 10px;
+		}
+		.photo__caption {
+			padding: 10px;
+		}
+	}
+	&__date {
+		padding: 20px 0;
+		@include font-pack(false, 14px, 300, false, #444);		
+	}
+	&__title {
+		margin: 0 0 20px;
+		@include font-pack(false, 20px, 300, false, #000);		
+	}
+	&__content {
+		@include font-pack(false, 16px, 300, false, #444);
+		a {
+			color: $color-kcm-blue;
+		}
+		blockquote {
+			@include font-pack(false, 18px, 300, false, #000);
+			&:before {
+				content: ''
+			}
+		}
+	}
+	// keynote
+	&__keynote {
+		position: relative;
+		padding: 20px 0;
+		&__title {
+			padding: 10px 0;
+			@include font-pack(false, 18px, 300, false, #000);
+		}
+		&__wrap {
+			position: relative;
+			margin: 10px 0;
+			&:before {
+				position: absolute;
+				top: 0;
+				left: 0;
+				content: '';
+				height: 100%;
+				border-left: 1px solid #f0f0f0;
+			}
+		}
+		&__item {
+			display: block;
+			padding: 10px 0 10px 20px;
+			position: relative;
+			&:before {
+				position: absolute;
+				top: 11px;
+				left: -4px;
+				content: '';
+				width: 10px;
+				height: 10px;
+				background: $color-kcm-orange-light;
+				border-radius: 10px;
+			}
+			&:hover {
+				&:before {
+					background: lighten($color-kcm-orange-light, 20%);
+				}
+			}
+		}
+		&__date {
+			padding: 0 0 5px;
+			@include font-pack(false, 11px, 300, false, #000);
+		}
+		&__link {
+			padding: 0 0 5px;
+			display: block;
+			@include font-pack(false, 16px, 300, false, #555);
+		}
+	}
+	&__notif {
+		position: relative;
+		z-index: 1;
+		@include transition(all .2s ease);
+		opacity: 1;
+		visibility: visible;
+		&--hide {
+			opacity: 0;
+			visibility: hidden;
+		}
+		&__wrap {
+			padding: 10px 0 20px;
+			width: 100%;
+			text-align: center;
+			margin: 0 auto;
+		}
+		&__button {
+			width: auto;
+			padding: 5px 15px;
+			background: $color-kcm-blue;
+			border-radius: 20px;
+			@include font-pack(false, 16px, 300, false, #fff);			
+			&:hover {
+				color: #fff;
+				background: darken($color-kcm-blue, 10%);
+			}
+		}
+	}
+}

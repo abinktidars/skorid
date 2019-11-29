@@ -1,0 +1,79 @@
+.tooltips {
+	position: absolute;
+	// bottom: 36px;
+	// right: 10px;
+	// width: auto;
+	width: 200px;
+//	min-width: 180px;
+//	max-width: 250px;
+	z-index: 9999;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+	cursor: default;
+	&:before {
+		content: '';
+		position: absolute;
+		width: 10px;
+		height: 10px;
+		-ms-transform: rotate(-45deg);
+		-webkit-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+		background: #2d2d2d;
+	}
+	&--right {
+		bottom: 5%;
+		left: 100%;
+		padding-left: 10px;
+		&:before {
+			top: 40%;
+			left: 5px;
+		}
+	}
+	&--left {
+		bottom: 5%;
+		right: 100%;
+		padding-right: 10px;
+		&:before {
+			top: 40%;
+			right: 5px;
+		}
+	}
+	&--bottom {
+		bottom: -100%;
+		left: -100%;
+		padding-top: 10px;
+		&:before {
+			top: 5px;
+			left: 45%;
+		}
+	}
+	&--top {
+		bottom: 100%;
+		left: -100%;
+		padding-bottom: 10px;
+		&:before {
+			bottom: 5px;
+			left: 45%;
+		}
+	}
+	& span {
+		border-radius: 5px;
+		background: #2d2d2d;
+		display: block;
+		// margin-top: 10px;
+		padding: 10px;
+		@include font-pack(false, 11px, 300, false, #fff);
+	}
+	&--show {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+
+

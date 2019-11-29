@@ -1,0 +1,107 @@
+// themes
+.theme {
+	&--bola {
+		@include make-themes($color_kcm_bola, #fff);
+	}
+	&--tekno {
+		@include make-themes($color_kcm_tekno, #000);
+		.topic {
+			&--review {
+				.article__box {
+					background: #333;
+				}
+				.article__title {
+					color: #fff;
+				}
+				.article__title--bullet {
+					padding: 6px 20px 0 40px;
+				}
+				.article__title--bullet:after {
+					background: #fff;
+					left: 20px;
+				}
+			}
+		}
+	}
+	&--entertainment {
+		@include make-themes($color_kcm_entertainment, #fff);
+	}
+	&--otomotif {
+		@include make-themes($color_kcm_otomotif, #fff);
+		// galeri
+		.lensa__photo__caption {
+			@include font-pack(false, false, false, false, #000);
+		}
+		.form__select {
+			border: 1px solid #2a2a2a;
+			color: #2a2a2a;
+		}
+		// .form__select__wrap:after {
+		// 	border-left: 2px solid #2a2a2a;
+		// 	border-bottom: 2px solid #2a2a2a;
+		// }
+	}
+	&--sains {
+		@include make-themes($color_kcm_sains, #fff);
+		.form__select {
+			border: 1px solid $color_kcm_sains;
+			color: #85949a;
+			font-weight: 400;
+		}
+		// .form__select__wrap:after {
+		// 	border-left: 2px solid #2a2a2a;
+		// 	border-bottom: 2px solid #2a2a2a;
+		// }
+		.consult {
+			&__textarea,
+			&__input {
+				border: 1px solid $color_kcm_sains;
+			}
+			&__button {
+				background: $color_kcm_sains;
+				&:hover {
+					background: darken($color_kcm_sains, 10%);
+				}
+			}
+			&__ahli {
+				border-left: 3px solid $color_kcm_sains;
+			}
+		}
+	}
+	&--lifestyle {
+		@include make-themes($color_kcm_lifestyle, #fff);
+	}
+	&--properti {
+		@include make-themes($color_kcm_properti, #fff);
+		.form__select {
+			border: 1px solid $color_kcm_properti;
+			color: #85949a;
+			font-weight: 400;
+		}
+		.form__select__wrap:after {
+			border-left: 2px solid #2a2a2a;
+			border-bottom: 2px solid #2a2a2a;
+		}
+		.consult {
+			&__textarea,
+			&__input {
+				border: 1px solid $color_kcm_properti;
+			}
+			&__button {
+				background: $color_kcm_properti;
+				&:hover {
+					background: darken($color_kcm_properti, 10%);
+				}
+			}
+			&__ahli {
+				border-left: 3px solid $color_kcm_properti;
+			}
+		}
+	}
+	&--travel {
+		@include make-themes($color_kcm_travel, #fff);
+	}
+	// &--tv {
+	// 	@include make-themes($color_kcm_tv, #fff);
+	// }
+}

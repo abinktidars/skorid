@@ -1,0 +1,440 @@
+.quiz {
+    position: relative;
+    display: block;
+    margin: 25px 0;
+
+    &Start {
+        &__term {
+            padding: 15px;
+            background: $color_quiz_bg;
+            font-size: 16px;
+
+            &__head {
+                font-size: 17px;
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+
+            &__list {
+                ol,
+                ul {
+                    list-style: decimal;
+                    padding-left: 1em;
+                    line-height: 1.7;
+                }
+
+            }
+        }
+    }
+
+    &Number {
+        &__wrap {
+            position: relative;
+            background: $color-kcm-blue;
+            padding: 5px 10px;
+            border-radius: 10px;
+        }
+
+        &__item {
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 500;
+            color: white;
+
+            &::after {
+                content: ' / ';
+            }
+
+            &:last-child {
+                &::after {
+                    content: ' ';
+                }
+            }
+        }
+
+        &__text {
+            position: relative;
+            display: inline-block;
+            margin: 0;
+        }
+    }
+
+    &Rank {
+        &__list {
+            position: relative;
+            margin: 25px 0;
+            padding: 0 80px;
+        }
+
+        &__user {
+            text-align: center;
+            color: black;
+
+            h2 {
+                font-size: 21px;
+                font-weight: 700;
+            }
+        }
+
+        &__table {
+            text-align: center;
+            width: 100%;
+            color: black;
+            margin: 5px 0;
+
+            &__heading {
+                background: #DADADA;
+                font-size: 16px;
+                padding: 5px 10px;
+
+                &:first-child {
+                    border-right: 2px solid white;
+                }
+            }
+
+            &__content {
+                background: #E5E5E5;
+                font-size: 21px;
+                padding: 5px 10px;
+                font-weight: 700;
+
+                &:first-child {
+                    border-right: 2px solid white;
+                }
+            }
+        }
+
+        &__item {
+            display: flex;
+            align-items: center;
+            margin: 25px 0;
+            justify-content: space-between;
+        }
+
+        &__img {
+            width: 71px;
+            height: 71px;
+            background: $color_quiz_border;
+            border-radius: 50%;
+            margin-right: 20px;
+
+            img {
+                border-radius: 50%;
+            }
+        }
+
+        &__name {
+            font-size: 16px;
+            margin-right: 20px;
+            width: 150px;
+            overflow: hidden;
+        }
+
+        &__score {
+            font-size: 18px;
+            font-weight: 700;
+            width: 51px;
+            text-align: right;
+            overflow: hidden;
+        }
+
+        &__number {
+            margin-right: 20px;
+            font-size: 28px;
+            font-style: italic;
+            font-weight: 800;
+        }
+
+        &__head {
+            color: white;
+
+            &__text {
+                h2 {
+                    font-size: 24px;
+                    font-weight: 800;
+                }
+            }
+        }
+
+        &__banner {
+            position: relative;
+            background: $color_quiz_ribbon;
+            padding: 15px;
+            text-align: center;
+        }
+
+        &__intro {
+            position: relative;
+            text-align: center;
+            padding: 25px 45px;
+
+            &__text {
+                font-size: 21px;
+                font-weight: 800;
+            }
+        }
+
+        &__ribbon {
+            position: absolute;
+            transform: rotate(90deg);
+            top: 30px;
+
+            &--left {
+                left: 45px;
+            }
+
+            &--right {
+                right: 0px;
+            }
+
+            &:after {
+                content: "";
+                height: 0;
+                width: 0;
+                top: 15px;
+                right: -30px;
+                position: absolute;
+                border-left: 30px solid $color-quiz-ribbon;
+                border-right: 30px solid transparent;
+                border-bottom: 30px solid $color-quiz-ribbon;
+            }
+
+            &:before {
+                content: "";
+                height: 0;
+                width: 0;
+                top: 0px;
+                right: -30px;
+                position: absolute;
+                border-left: 30px solid $color-quiz-ribbon;
+                border-right: 30px solid transparent;
+                border-top: 30px solid $color-quiz-ribbon;
+            }
+        }
+
+        &__title {
+            font-size: 24px;
+            text-align: center;
+        }
+
+        &__intro {
+            position: relative;
+            background: $color_quiz_rank;
+
+            &__text {
+                margin: 0;
+            }
+        }
+
+        &__foot {
+            text-align: center;
+            position: relative;
+            display: block;
+            margin: 25px 0;
+        }
+
+        &__outro {
+            h2 {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &__img {
+        padding-left: 0;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    &__ask {
+        padding-right: 0;
+        max-height: 185px;
+        overflow: hidden;
+
+        p {
+            font-size: 24px;
+            font-weight: 800;
+            margin: 0;
+        }
+    }
+
+    &__guide {
+        text-align: center;
+        transition: .2s ease-in-out;
+
+        p {
+            margin: 0px;
+        }
+    }
+
+    &__answer {
+        margin: 20px 0;
+
+        &__item {
+            &:nth-child(odd) {
+                padding-left: 0;
+            }
+
+            &:nth-child(even) {
+                padding-right: 0;
+            }
+        }
+
+        &__wrap {
+            margin-bottom: 10px;
+            border: 2px solid $color_quiz_border;
+            border-radius: 10px;
+            padding: 5px 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            transition: .2s ease-in-out;
+        }
+
+        &__item {
+            &.true {
+                .quiz__answer__wrap {
+                    border: 2px solid $color_quiz_true;
+                }
+
+                .quiz__answer__radio {
+                    border: 2px solid $color_quiz_true;
+                    background: $color_quiz_true;
+                    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iNyIgdmlld0JveD0iMCAwIDEwIDciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTMuMzk2NDQgNi44NjI1MkwwLjE0NjQ0MSAzLjgxMTc0Qy0wLjA0ODgxMzUgMy42Mjg0NiAtMC4wNDg4MTM1IDMuMzMxMjggMC4xNDY0NDEgMy4xNDc5OEwwLjg1MzUzMSAyLjQ4NDIyQzEuMDQ4NzkgMi4zMDA5MSAxLjM2NTM5IDIuMzAwOTEgMS41NjA2NCAyLjQ4NDIyTDMuNzUgNC41MzkzNUw4LjQzOTM2IDAuMTM3NDY0QzguNjM0NjEgLTAuMDQ1ODIxMiA4Ljk1MTIxIC0wLjA0NTgyMTIgOS4xNDY0NyAwLjEzNzQ2NEw5Ljg1MzU2IDAuODAxMjI4QzEwLjA0ODggMC45ODQ1MTMgMTAuMDQ4OCAxLjI4MTY5IDkuODUzNTYgMS40NjQ5OUw0LjEwMzU1IDYuODYyNTRDMy45MDgyOCA3LjA0NTgyIDMuNTkxNyA3LjA0NTgyIDMuMzk2NDQgNi44NjI1MloiIGZpbGw9IndoaXRlIi8+PC9zdmc+);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+            }
+
+            &.false {
+                .quiz__answer__wrap {
+                    border: 2px solid $color_quiz_false;
+                }
+
+                .quiz__answer__radio {
+                    border: 2px solid $color_quiz_false;
+                    background: $color_quiz_false;
+                    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSI5IiB2aWV3Qm94PSIwIDAgOSA5IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik03LjU3MTg2IDguODM0ODFMOC44MzQ4MSA3LjU3MTg2QzkuMDU1MDYgNy4zNTE2IDkuMDU1MDYgNi45OTc3OSA4LjgzNDgxIDYuNzc3NTNMNi41NTcyOCA0LjVMOC44MzQ4MSAyLjIyMjQ3QzkuMDU1MDYgMi4wMDIyMSA5LjA1NTA2IDEuNjQ4NCA4LjgzNDgxIDEuNDI4MTRMNy41NzE4NiAwLjE2NTE5MUM3LjM1MTYgLTAuMDU1MDYzOCA2Ljk5Nzc5IC0wLjA1NTA2MzggNi43Nzc1MyAwLjE2NTE5MUw0LjUgMi40NDI3MkwyLjIyMjQ3IDAuMTY1MTkxQzIuMDAyMjEgLTAuMDU1MDYzOCAxLjY0ODQgLTAuMDU1MDYzOCAxLjQyODE0IDAuMTY1MTkxTDAuMTY1MTkxIDEuNDI4MTRDLTAuMDU1MDYzOCAxLjY0ODQgLTAuMDU1MDYzOCAyLjAwMjIxIDAuMTY1MTkxIDIuMjIyNDdMMi40NDI3MiA0LjVMMC4xNjUxOTEgNi43Nzc1M0MtMC4wNTUwNjM4IDYuOTk3NzkgLTAuMDU1MDYzOCA3LjM1MTYgMC4xNjUxOTEgNy41NzE4NkwxLjQyODE0IDguODM0ODFDMS42NDg0IDkuMDU1MDYgMi4wMDIyMSA5LjA1NTA2IDIuMjIyNDcgOC44MzQ4MUw0LjUgNi41NTcyOEw2Ljc3NzUzIDguODM0ODFDNi45OTU0NCA5LjA1MjcyIDcuMzUxNiA5LjA1MjcyIDcuNTcxODYgOC44MzQ4MVoiIGZpbGw9IndoaXRlIi8+PC9zdmc+);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+            }
+        }
+
+        &__radio {
+            width: 20px;
+            height: 20px;
+            border: 2px solid $color_quiz_border;
+            border-radius: 50%;
+            background: white;
+            transition: .2s ease-in-out;
+        }
+
+        &__text {
+            padding-left: 1em;
+            font-weight: 800;
+            font-size: 16px;
+            color: black;
+            width: 310px;
+        }
+    }
+
+    &__ref {
+        text-align: center;
+        margin: 10px 0;
+
+        &__head {
+            position: relative;
+            height: 20px;
+        }
+
+        &__text {
+            margin: 0;
+            font-size: 16px;
+            color: black;
+            position: absolute;
+
+            width: 100%;
+        }
+
+        &__link {
+            font-size: 21px;
+            color: $color-quiz-rank;
+        }
+
+        // &__text{
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     height: 20px;
+        // }
+    }
+
+    &__result {
+        color: white;
+        text-align: center;
+
+        &__head {
+            padding: 25px 10px;
+            background: $color_quiz_ribbon;
+
+            h2 {
+                font-size: 18px;
+                font-weight: 800;
+                letter-spacing: 1px;
+            }
+        }
+
+        &__intro {
+            background: $color_quiz_rank;
+            padding: 0px 40px;
+        }
+
+        &__wrap {
+            background-image: url('../images/quiz-result.png');
+            background-repeat: no-repeat;
+            background-position-x: right;
+            background-position-y: center;
+            padding: 20px 0;
+        }
+
+        &__outro {
+            text-align: center;
+            color: black;
+            font-size: 16px;
+            margin: 25px 0;
+        }
+
+        &__text {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        &__score {
+            font-size: 6em;
+            font-weight: 800;
+        }
+
+        &__report {
+            font-size: 17px;
+            font-weight: 400;
+        }
+    }
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.icon {
+    &-whatsapp {
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSIxNnB4IiBoZWlnaHQ9IjE2cHgiIHZpZXdCb3g9IjQzMSA1MDQgMTYgMTYiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgNDMxIDUwNCAxNiAxNiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGcgaWQ9Imljb21vb24taWdub3JlIj48L2c+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTQ0MS4xNTksNTEyLjc4N2MwLjA4OSwwLDAuNDI1LDAuMTUzLDEuMDA3LDAuNDU2YzAuNTgyLDAuMzAyLDAuODksMC40ODMsMC45MjMsMC41NDVjMC4wMTUsMC4wMzQsMC4wMiwwLjA4NywwLjAyLDAuMTU0YzAsMC4yMjctMC4wNTksMC40ODktMC4xNzMsMC43ODZjLTAuMTEyLDAuMjY2LTAuMzU1LDAuNDkyLTAuNzMzLDAuNjc0cy0wLjcyOSwwLjI3NC0xLjA1MiwwLjI3NGMtMC4zOTIsMC0xLjA0Ni0wLjIxMy0xLjk2MS0wLjY0MWMtMC42NzQtMC4zMDgtMS4yNTktMC43MTQtMS43NTQtMS4yMTdjLTAuNDk1LTAuNTAxLTEuMDAzLTEuMTM5LTEuNTI2LTEuOTA4Yy0wLjQ5NS0wLjczNi0wLjczOS0xLjQwMS0wLjczMi0ydi0wLjA4NGMwLjAyMS0wLjYyNCwwLjI3NC0xLjE2OSwwLjc2My0xLjYyOGMwLjE2NS0wLjE1MSwwLjM0NC0wLjIyOSwwLjUzNy0wLjIyOWMwLjA0MSwwLDAuMTA0LDAuMDA1LDAuMTg2LDAuMDE3YzAuMDgxLDAuMDExLDAuMTQ4LDAuMDE3LDAuMTk2LDAuMDE3YzAuMTMxLDAsMC4yMjEsMC4wMjIsMC4yNzQsMC4wNjdjMC4wNSwwLjA0NSwwLjEwNCwwLjEzNywwLjE2LDAuMjgzYzAuMDUzLDAuMTM3LDAuMTY3LDAuNDM5LDAuMzM4LDAuOTA5YzAuMTczLDAuNDY0LDAuMjYsMC43MjQsMC4yNiwwLjc3MmMwLDAuMTQzLTAuMTIxLDAuMzQxLTAuMzU4LDAuNTkzYy0wLjIzNSwwLjI1Mi0wLjM1NSwwLjQxMi0wLjM1NSwwLjQ3OWMwLDAuMDUsMC4wMTcsMC4xMDEsMC4wNTMsMC4xNTdjMC4yMzIsMC41LDAuNTg0LDAuOTc0LDEuMDUyLDEuNDEzYzAuMzgzLDAuMzYzLDAuOTAzLDAuNzExLDEuNTU2LDEuMDQxYzAuMDg0LDAuMDUsMC4xNTksMC4wNzIsMC4yMjksMC4wNzJjMC4xMDEsMCwwLjI4OC0wLjE2NSwwLjU1Ny0wLjUwMUM0NDAuODk0LDUxMi45NTUsNDQxLjA3LDUxMi43ODcsNDQxLjE1OSw1MTIuNzg3TDQ0MS4xNTksNTEyLjc4N3ogTTQzOS4wNjcsNTE4LjI1NmMwLjg3MywwLDEuNzA5LTAuMTc0LDIuNTEyLTAuNTE4YzAuODAxLTAuMzQ0LDEuNDg4LTAuODAzLDIuMDY3LTEuMzgyYzAuNTc2LTAuNTc2LDEuMDM4LTEuMjY4LDEuMzgyLTIuMDY3YzAuMzQ1LTAuODAzLDAuNTE1LTEuNjQsMC41MTUtMi41MTJzLTAuMTctMS43MDktMC41MTUtMi41MTJjLTAuMzQ0LTAuOC0wLjgwNi0xLjQ4OC0xLjM4Mi0yLjA2N2MtMC41NzktMC41NzYtMS4yNjctMS4wMzgtMi4wNjctMS4zODJjLTAuODAzLTAuMzQ0LTEuNjM5LTAuNTE1LTIuNTEyLTAuNTE1cy0xLjcwOSwwLjE3MS0yLjUxMiwwLjUxNWMtMC44MDEsMC4zNDQtMS40OTEsMC44MDYtMi4wNjcsMS4zODJjLTAuNTc4LDAuNTc5LTEuMDM5LDEuMjY4LTEuMzgzLDIuMDY3Yy0wLjM0MywwLjgwMy0wLjUxNSwxLjY0LTAuNTE1LDIuNTEyYzAsMS4zOTYsMC40MTMsMi42NjEsMS4yMzgsMy43OTZsLTAuODE1LDIuNDAybDIuNDk3LTAuNzk0QzQzNi41OTQsNTE3Ljg5Nyw0MzcuNzgsNTE4LjI1Niw0MzkuMDY3LDUxOC4yNTZMNDM5LjA2Nyw1MTguMjU2eiBNNDM5LjA2Nyw1MDRjMS4wNTIsMCwyLjA1NiwwLjIwNywzLjAxNiwwLjYxOGMwLjk2LDAuNDE0LDEuNzg3LDAuOTY4LDIuNDgxLDEuNjYyYzAuNjkzLDAuNjk0LDEuMjQ3LDEuNTIyLDEuNjYxLDIuNDgxYzAuNDEyLDAuOTU5LDAuNjE5LDEuOTY0LDAuNjE5LDMuMDE2YzAsMS4wNTItMC4yMDcsMi4wNTktMC42MTksMy4wMThjLTAuNDE0LDAuOTYtMC45NjgsMS43ODUtMS42NjEsMi40NzljLTAuNjk0LDAuNjk3LTEuNTIxLDEuMjQ4LTIuNDgxLDEuNjYyYy0wLjk2LDAuNDExLTEuOTY0LDAuNjE4LTMuMDE2LDAuNjE4Yy0xLjM0LDAtMi41OTYtMC4zMjEtMy43NjUtMC45NjhMNDMxLDUxOS45NjhsMS40MDMtNC4xOGMtMC43NDMtMS4yMjMtMS4xMTMtMi41Ni0xLjExMy00LjAxMWMwLTEuMDUyLDAuMjA2LTIuMDU2LDAuNjE4LTMuMDE2czAuOTY3LTEuNzg4LDEuNjYtMi40ODFjMC42OTUtMC42OTQsMS41MjItMS4yNDgsMi40ODEtMS42NjJDNDM3LjAwOCw1MDQuMjA3LDQzOC4wMTUsNTA0LDQzOS4wNjcsNTA0TDQzOS4wNjcsNTA0eiIvPjwvc3ZnPg==) center no-repeat;
+
+    }
+}

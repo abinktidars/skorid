@@ -1,0 +1,168 @@
+.theme--sso{
+	background: #f0f0f0;
+}
+.sso {
+	&--hide {
+		visibility: hidden;
+		display: none;
+	}
+	&__parent {
+		position: relative;
+		max-width: 500px;
+		margin: 5% auto 0;
+		background: #f0f0f0;
+	}
+	&__header__inside {
+		position: relative;
+		background: #101010;
+		padding: 15px;
+	}
+	&__logo {
+		text-align: center;
+		@include font-pack(false, 20px, 700, false, #fff);
+	}
+	
+	// content
+	&__row {
+		padding: 20px 0 0;
+		background: #fff;
+	}
+	&__container {
+		width: 100%;
+		margin-right: auto;
+		margin-left: auto;
+//		padding-top: 20px;
+//		padding-bottom: 20px;
+		padding-right: $grid-gutter-width-edge;
+		padding-left: $grid-gutter-width-edge;
+		*zoom: 1;
+		position: relative;
+		@include font-pack(false, false, 300, 1.4, #000);
+		@include min-responsive(400px) {
+			width: 400px;
+		}
+	}
+	&__title {
+		text-align: center;
+		padding: 15px 0;
+		@include font-pack(false, 30px, 300, false, false);
+		letter-spacing: 3px;
+	}
+	&__belt {
+		margin: 15px 0;
+		padding: 15px 0;
+		border-top: 1px solid #ccc;
+		border-bottom: 1px solid #ccc;
+	}
+	&__links {
+		text-decoration: underline;
+		color: #000;
+		font-weight: 700;
+		//padding: 0 5px;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	&__button {
+		display: block;
+		margin: 10px 0;
+		padding: 9px 10px;
+		border-radius: 3px;
+		text-align: center;
+		color: #fff;
+		font-weight: 400;
+		&:hover {
+			color: #fff;
+		}
+		&--facebook {
+			background: $color_facebook;
+		}
+		&--google {
+			background: $color_google_plus;
+		}
+	}
+	&__form {
+		&--center {
+			text-align: center;
+		}
+		.form__group--wide {
+			margin: 0 0 40px;
+		}
+		.label__sso {
+			display: block;
+			padding: 0 0 5px;
+			//font-size: 13px;
+		}
+		.sso__radio {
+			margin-right: 5px;
+		}
+		.label__sso--inline {
+			display: inline-block;
+			padding-top: 10px;
+			padding-right: 10px;
+		}
+		.form__button {
+			background: #000;
+			font-weight: 300;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			display: block;
+			width: auto;
+			margin: 0 auto 10px;
+			padding: 9px 40px;
+			border-radius: 3px;
+			&:hover {
+				background: #202020;
+				color: #fff;
+			}
+		}
+		.form__radio {
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		.form__input {
+			border-radius: 3px;
+			border: 1px solid #ccc;
+		}
+		.form__input--reg {
+			display: inline-block;
+			width: 50%;
+		}
+		.sso__close {
+			display: inline-block;
+		}
+	}
+	&__sosmed {
+		margin-bottom: 20px;
+	}
+	&__god {
+		img {
+			margin: 15px 0;
+		}
+	}
+	&__highlight {
+		text-align: center;
+		padding: 20px 0;
+		@include font-pack(false, 20px, 700, false, false);
+	}
+	&__footer {
+		text-align: center;
+		padding: 25px 0;
+		background: #f0f0f0;
+	}
+}
+.form {
+	&__group {
+		&.has-error {
+			.form__input {
+				border: 1px solid #d80000;
+			} 
+			.error {
+				@include font-pack(false, 13px, 300, false, #d80000);
+				display: block;
+				clear: both;
+				padding: 5px 0 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,38 @@
+<div class="topic__wrap mt2 clearfix">
+{{#each WP.Topil}}
+{{#gte @index compare=../index_start}}
+{{#gte @index compare=../index_end}}
+{{else}}
+	<div class="article__grid">
+		<div class="article__asset">
+			<a href="topik-pilihan-detail.html">
+				{{#if img}}
+				<img src="http://assets.kompas.com/crop/0x0:1000x500/400x200/left/data/photo/{{img}}"/>
+				{{else}}
+				<div class="article__box--topic">
+					<b>{{title}}</b>
+				</div>
+				{{/if}}
+			</a>
+		</div>
+		<div class="article__box article__box--offset-0">
+		{{#each topic}}
+		{{#gte @index compare=../../index_start}}
+		{{#gte @index compare=../../index_end}}
+		{{else}}
+			<div class="article__list__item">
+				<h4 class="article__title article__title--bullet">
+					<a class="article__link" href="artikel.html">{{title}}</a>
+				</h4>
+			</div>
+		{{/gte}}
+		{{else}}
+		{{/gte}}
+		{{/each}}
+		</div>
+	</div>
+{{/gte}}
+{{else}}
+{{/gte}}
+{{/each}}
+</div>

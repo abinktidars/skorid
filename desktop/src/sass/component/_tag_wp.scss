@@ -1,0 +1,24 @@
+.tag {
+	&__populer {
+		&__wrap {
+			position: relative;
+			padding: 10px 0;
+			margin: 0 0 20px;
+			background: #f0f0f0;
+			box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+		}
+		&__item {
+			display: block;
+			float: left;
+			padding: 0 20px;
+			margin: 5px 0;
+			width: 33.333333%;
+		}
+		&__link {
+			display: block;
+			overflow: hidden;
+			height: 20px;
+			@include font-pack(false, 15px, 700, false, false);
+		}
+	}
+}

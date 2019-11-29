@@ -1,0 +1,68 @@
+.sidr {
+    // Default Settings
+    display: block;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    z-index: 8;
+    width: $sidebar-width;
+    overflow-x: hidden;
+    overflow-y: auto;
+    // padding: 0 0 0 20%;
+    background: #000;
+
+    .sidr-inner {
+        padding: 0 0 15px;
+
+        > p {
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+    }
+
+    &.right {
+        left: auto;
+        right: $sidebar-width-neg;
+    }
+
+    &.left {
+        left: $sidebar-width-neg;
+        right: auto;
+    }
+
+}
+
+#overlay {
+    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.9);
+    z-index: 7;
+    // display: none;
+    opacity: 0;
+    visibility: hidden;
+    @include base_transition(all);
+}
+
+.sidr-open {
+    &:before {
+        // content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.7);
+        z-index: 8;
+    }
+    #overlay {
+        opacity: 1;
+        visibility: visible;
+        // display: block;
+    }
+}
