@@ -1,5 +1,6 @@
 .social {
 	position: relative;
+	display: flex;
 	&__block {
 		// text-align: center;
 		padding: 15px;
@@ -11,8 +12,8 @@
 		}
 	}
 	&__item {
-		display: inline-block;
 		padding: 0 2px;
+		margin: 0 3px;
 	}
 	&__link {
 		display: inline-block;

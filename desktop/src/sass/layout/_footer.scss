@@ -3,7 +3,6 @@
 	padding: 20px 0 70px;
 	background: #000;
 	color: #fff;
-	border-top: 4px solid $color-kcm-blue;
     width: $screen-lg-desktop;
     @include min-responsive($screen-lg-desktop) {
         width: 100%;
@@ -12,9 +11,11 @@
 		padding: 10px 0 30px;
 	}
 	&__bottom {
-		border-top: 1px solid #2b2b2b;
 		padding: 30px 0 10px;
 		color: #b1b1b1;
+		>.pure-g{
+			align-self: center;
+		}
 	}
 	&__menu {
 		position: relative;
@@ -43,8 +44,12 @@
 	}
 	&__copy {
 		padding: 5px 0;
-		a:hover {
-			color: $color-kcm-blue;
+		color: white;
+		font-family: $font_title;
+	}
+	&__social{
+		.social{
+			justify-content: flex-end;
 		}
 	}
 }

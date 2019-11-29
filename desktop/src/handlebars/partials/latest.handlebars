@@ -1,4 +1,4 @@
-<div class="latest ga--latest mt2 clearfix">
+<div class="latest ga--latest clearfix">
 	{{!indeks}}
 	{{!#withFirst Latest 10}}
 	{{#each WP.Latest}}
@@ -15,20 +15,23 @@
 			{{/eq}}
 			<div class="article__asset">
 				<a href="{{link}}">	
-					<img src="https://asset.kompas.com/crop/0x0:0x0/177x117/data/photo/{{img}}" alt="{{title}}" />
+					<img src="https://asset.kompas.com/crop/0x0:0x0/215x215/data/photo/{{img}}" alt="{{title}}" />
 				</a>
 			</div>
+		</div>
+		<div class="article__list__info">
+			<div class="article__subtitle button--default article__subtitle--inline">
+				<a href="#">{{subtitle}}</a>
+			</div>
+			<div class="article__date">2 Menit yang Lalu</div>
 		</div>
 		<div class="article__list__title">
 			<h3 class="article__title article__title--medium">
 				<a class="article__link" href="{{link}}">{{title}}</a>
 			</h3>
-		</div>
-		<div class="article__list__info">
-			<div class="article__subtitle article__subtitle--inline{{#eq ads compare=1}} color--brandzview{{/eq}}">
-				<a href="#">{{subtitle}}</a>
-			</div>
-			<div class="article__date">{{dates}}</div>
+			<p class="article__lead">
+				Menghadapi megabintang Barcelona, Lionel Messi, dan megabintang Juventus, Cristiano Ronaldo, dalam tempo empat hari membuat bek termahal Inter Milan tahu siapa sosok terhebat
+			</p>
 		</div>
 		<!-- option -->
 		{{!> comp_option}}

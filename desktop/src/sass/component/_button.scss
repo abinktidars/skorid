@@ -1,16 +1,21 @@
 .button {
 	position: relative;
-
+	&--right{
+		float: right;
+		transform: translateY(10px);
+	}
 	&--default {
 		position: relative;
 		display: inline-block;
-		width: auto;
-		padding: 8px 20px;
+		text-align: center;
+		width: 140px;
+		padding: 6px 20px;
 		// border: 1px solid $color-kcm-blue;
 		vertical-align: text-bottom;
-		text-transform: uppercase;
 		letter-spacing: 1px;
-		@include font-pack(false, 12px, 500, false, $color-kcm-blue);
+		background: $color-kcm-blue;
+		@include font-pack($font_title, 12px, 500, false, white);
+		border-radius: 5px;
 
 		&:hover {
 			color: #fff;

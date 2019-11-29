@@ -52,25 +52,13 @@ Klik artwork untuk melihat profil artist.
 		<!-- row highlight -->
 		<div class="pure-g mt2">
 			<div class="pure-u-1 pure-u-md-7-10">
-			
-				<!-- sorotan -->
-				<div class="title clearfix">
-					<div class="title__content">Sorotan</div>
-				</div>
-				{{> sorotan}}
 
 				<!-- terkini -->
 				<div class="title clearfix">
 					<div class="title__content">Berita Terkini</div>
-					<a class="button button--default button--title pull-right" href="indeks-berita.html">Lihat Semua</a>
+					<a class="button button--default button--right" href="indeks-berita.html">Lihat Semua</a>
 				</div>
-				{{> latest total=4 index_start=0 index_end=3}}
-				
-				<!-- video kompastv -->
-				{{> video_wp total=1 index_start=0 index_end=1}}
-				
-				<!-- terkini -->
-				{{> latest total=3 index_start=3 index_end=5}}
+				{{> latest total=5 index_start=0 index_end=5}}
 				
 			</div>
 			<div class="pure-u-1 pure-u-md-3-10">

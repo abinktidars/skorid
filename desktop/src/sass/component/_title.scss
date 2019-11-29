@@ -1,6 +1,9 @@
 .title {
 	position: relative;
 	border-bottom: 1px solid #9B9B9B;
+	background: black;
+	padding: 0 20px;
+	border-radius: 5px 5px 0px 0px;
 	&--clean {
 		border-bottom: 1px solid transparent;
 	}
@@ -15,17 +18,8 @@
 	&__content {
 		position: relative;
 		display: inline-block;
-		text-transform: uppercase;
 		padding: 10px 0;
-		@include font-pack($font_body2, 20px, 700, false, #4a4a4a);
-		&:after {
-			content: '';
-			position: absolute;
-			left: 0;
-			bottom: 0;
-			width: 101%;
-			border-bottom: 5px solid $color_kcm_blue;
-		}
+		@include font-pack($font_title, 21px, 700, false, white);
         
         &--logo {
             padding: 0px 0 10px;
