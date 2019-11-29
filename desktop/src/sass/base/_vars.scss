@@ -1,0 +1,236 @@
+
+
+
+// background
+$bg_base: #fff;
+
+
+
+
+
+// font
+$font_vik: 'Black Ops One', cursive;
+$font_vik2: 'Open Sans',sans-serif;
+$font_body: 'Poppins', sans-serif;
+$font_title: 'Poppins', sans-serif;
+$font_body2: 'Poppins', sans-serif;
+$font_404: 'Fjalla One', sans-serif;
+$font_icon: 'icomoon';
+
+// color palette
+$color_primary: #2a2a2a;
+$color_secondary: #000;
+
+// color kcm
+$color_kcm_orange: #E55225;
+$color_kcm_orange_light: #EF9021;
+$color_kcm_blue: #E52525;
+$color_kcm_blue_light: #71C4D6;
+$color_kcm_green: #2EAC71;
+$color_kcm_green_light: #B6CC33;
+
+// color channel
+$color_kcm_news: #E55225;
+$color_kcm_ekonomi: #E55225;
+$color_kcm_money: #438E10;
+$color_kcm_bola: #0db24b;
+$color_kcm_tekno: #bad107;
+$color_kcm_entertainment: #25afe5;
+$color_kcm_otomotif: #fb0404;
+$color_kcm_health: #6F9F31;
+$color_kcm_sains: #8171d6;
+// $color_kcm_lifestyle: #DF286D; // female
+$color_kcm_lifestyle: #00a783; // lifestyle
+$color_kcm_properti: #b57c29;
+$color_kcm_travel: #00bcd4;
+$color_kcm_edukasi: #E55225;
+$color_kcm_opini: #E55225;
+$color_kcm_lensa: #bdbdbd;
+$color_kcm_tv: #bdbdbd;
+$color_kcm_vik: #bdbdbd;
+
+// color god network
+$color_kompas: #005496;
+$color_juara: #f00;
+$color_otomania: #c30000;
+$color_kompasiana: #3dc3e0;
+$color_gramedia: #2EAC71;
+$color_pijaru: #ea5329;
+
+// color ads
+$color_brandzview: #3CA5DD;
+$color_advertorial: #3CA5DD;
+
+// color sosmed
+$color_facebook: #3b5998;
+$color_twitter: #1da1f2;
+$color_google_plus: #dd4b39;
+$color_whatsapp: #25d366;
+$color_line: #00c300;
+$color_path: #ee3423;
+$color_linkedin: #0077b5;
+$color_pinterest: #bd081c;
+$color_youtube: #cd201f;
+$color_instagram: #c13584;
+$color_comment: #71C8F0;
+
+//color hoax
+$color_lapor: #cc0000;
+$color_cek: #ff8a00;
+$color_fakta: #009900;
+$color_hoax: #d82425;
+$color_sesat: #ff9900;
+$color_klarifikasi: #389fdb;
+
+//color quiz
+$color_quiz_play: #E94F1D;
+$color_quiz_bg: #F1F1F1;
+$color_quiz_border: #E5E5E5;
+$color_quiz_true: #42C23F;
+$color_quiz_false: #FF0000;
+$color_quiz_result: #0F9C0C;
+$color_quiz_rank: #69A2DA;
+$color_quiz_ribbon: #598DCA;
+
+
+// font size template
+$size_small: 12.32px;
+$ms-base: 1em;
+$ms-ratio: 1.333;
+
+
+
+
+
+// bootstrap
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+//** Deprecated `$screen-xs` as of v3.0.1
+$screen-xs:                  480px !default;
+//** Deprecated `$screen-xs-min` as of v3.2.0
+$screen-xs-min:              $screen-xs !default;
+//** Deprecated `$screen-phone` as of v3.0.1
+$screen-phone:               $screen-xs-min !default;
+
+// Small screen / tablet
+//** Deprecated `$screen-sm` as of v3.0.1
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+//** Deprecated `$screen-tablet` as of v3.0.1
+$screen-tablet:              $screen-sm-min !default;
+
+// Medium screen / desktop
+//** Deprecated `$screen-md` as of v3.0.1
+// $screen-md:                  992px !default;
+$screen-md:                  1024px !default;
+$screen-md-min:              $screen-md !default;
+//** Deprecated `$screen-desktop` as of v3.0.1
+$screen-desktop:             $screen-md-min !default;
+
+// Large screen / wide desktop
+//** Deprecated `$screen-lg` as of v3.0.1
+$screen-lg:                  1100px !default;
+$screen-lg-min:              $screen-lg !default;
+//** Deprecated `$screen-lg-desktop` as of v3.0.1
+$screen-lg-desktop:          $screen-lg-min !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+
+
+//== Grid system
+//
+//## Define your custom responsive grid.
+
+//** Number of columns in the grid.
+$grid-columns:              10 !default;
+$grid-columns-9:            9 !default;
+//** Padding between columns. Gets divided in half for the left and right.
+$grid-gutter-width:         30px !default;
+$grid-gutter-width-edge:    15px !default;
+// Navbar collapse
+//** Point at which the navbar becomes uncollapsed.
+$grid-float-breakpoint:     $screen-sm-min !default;
+//** Point at which the navbar begins collapsing.
+$grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
+
+
+//== Container sizes
+//
+//## Define the maximum width of `.container` for different screen sizes.
+
+// Small screen / tablet
+$container-tablet:             (760px + $grid-gutter-width-edge) !default;
+//** For `$screen-sm-min` and up.
+$container-sm:                 $container-tablet !default;
+
+// Medium screen / desktop
+// $container-desktop:            (940px + $grid-gutter-width-edge) !default;
+$container-desktop:            (1010px + $grid-gutter-width-edge) !default;
+//** For `$screen-md-min` and up.
+$container-md:                 $container-desktop !default;
+
+// Large screen / wide desktop
+$container-large-desktop:      (1160px + $grid-gutter-width-edge) !default;
+//** For `$screen-lg-min` and up.
+$container-lg:                 $container-large-desktop !default;
+
+
+
+
+
+
+
+
+////////////////////////
+//    Settings MFP    //
+////////////////////////
+
+// overlay
+$mfp-overlay-color:                   #000 !default;                    	// Color of overlay screen
+$mfp-overlay-opacity:                 0.8 !default;                        // Opacity of overlay screen
+$mfp-shadow:                          0 0 8px rgba(0, 0, 0, 0.6) !default; // Shadow on image or iframe
+
+// spacing
+$mfp-popup-padding-left:              8px !default;                        // Padding from left and from right side
+$mfp-popup-padding-left-mobile:       6px !default;                        // Same as above, but is applied when width of window is less than 800px
+
+$mfp-z-index-base:                    1040 !default;                       // Base z-index of popup
+
+// controls
+$mfp-include-arrows:                  true !default;                       // Include styles for nav arrows
+$mfp-controls-opacity:                1 !default;                          // Opacity of controls
+$mfp-controls-color:                  #FFF !default;                       // Color of controls
+$mfp-controls-border-color:           #3F3F3F !default; 	                 // Border color of controls
+$mfp-inner-close-icon-color:          #333 !default;                       // Color of close button when inside
+$mfp-controls-text-color:             #CCC !default;                       // Color of preloader and "1 of X" indicator
+$mfp-controls-text-color-hover:       #FFF !default;                       // Hover color of preloader and "1 of X" indicator
+
+// Iframe-type options
+$mfp-include-iframe-type:             true !default;                       // Enable Iframe-type popups
+$mfp-iframe-padding-top:              40px !default;                       // Iframe padding top
+$mfp-iframe-background:               #000 !default;                       // Background color of iframes
+$mfp-iframe-max-width:                900px !default;                      // Maximum width of iframes
+$mfp-iframe-max-width-sso:            500px !default;                      // Maximum width of iframes
+$mfp-iframe-ratio:                    9/16 !default;                       // Ratio of iframe (9/16 = widescreen, 3/4 = standard, etc.)
+$mfp-iframe-ratio-sso:                3/2 !default;                        // Ratio of iframe (9/16 = widescreen, 3/4 = standard, etc.)
+
+// Image-type options
+$mfp-include-image-type:              true !default;                       // Enable Image-type popups
+$mfp-image-background:                #444 !default;
+$mfp-image-padding-top:               40px !default;                       // Image padding top
+$mfp-image-padding-bottom:            40px !default;                       // Image padding bottom
+$mfp-include-mobile-layout-for-image: true !default;                       // Removes paddings from top and bottom
+
+// Image caption options
+$mfp-caption-title-color:             #F3F3F3 !default;                    // Caption title color
+$mfp-caption-subtitle-color:          #BDBDBD !default;                    // Caption subtitle color
+
+// A11y
+$mfp-use-visuallyhidden:              false !default;                      // Hide content from browsers, but make it available for screen readers
+

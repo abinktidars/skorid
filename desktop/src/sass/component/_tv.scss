@@ -1,0 +1,56 @@
+.tv {
+	&__hl {
+		padding: 0 30px;
+		&__row {
+			padding: 20px 5px 0;
+			// margin: 0 -5px;
+		}
+		&__item {
+			width: 20%;
+			padding-left: 10px;
+			padding-right: 10px;
+			float: left;
+			.article__title {
+				@include font-pack(false, 18px, false, false, false);
+			}
+			&--active {
+				.video__button__play {
+					position: relative;
+				}
+				.video__button__play:before {
+					@include font-pack(false, 14px, false, false, #fff);
+					padding: 5px 10px;
+					background: $color_kcm_blue;
+					opacity: .8;
+					content: 'Now Playing';
+					position: absolute;
+					bottom: 0;
+					left: 0;
+				}
+				.icon-play {
+					opacity: 0;
+					visibility: hidden;
+				}
+				// .icon-play:before {
+				// 	content: 'Now Playing';
+				// 	width: 100px;
+				// 	border-radius: 0;
+				// 	@include font-pack(false, 16px, false, false, #fff);
+				// }
+				// .icon-play:after {
+				// 	opacity: 0;
+				// 	display: none;
+				// }
+			}
+		}
+	}
+	&__read {
+		padding: 0 30px;
+		.read__time {
+			padding: 30px 0;
+		}
+	}
+	&__content {
+		padding: 0 0 30px;
+	}
+}

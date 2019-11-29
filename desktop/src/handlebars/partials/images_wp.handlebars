@@ -1,0 +1,30 @@
+<div class="article__photo__wrap clearfix">
+	<div class="row clearfix js-photo-wp">
+	{{#each WP.Images}}
+	{{#gte @index compare=../index_start}}
+	{{#gte @index compare=../index_end}}
+	{{else}}
+		<div class="article__grid">
+			<div class="article__asset">
+				<a href="artikel.html">
+					{{#eq subtitle compare="Video"}}
+					<span class="icon-play video__button__play__item"></span>
+					<img src="{{img}}"/>
+					{{else}}
+					<img src="https://asset.kompas.com/crop/740x416/data/todaysphoto/{{img}}" />
+					{{/eq}}
+				</a>
+			</div>
+			<div class="article__box article__box--big">
+				<h4 class="article__title article__title--big">
+					<a class="article__link" href="artikel.html">{{title}}</a>
+				</h4>
+				<div class="article__photo__count">{{#eq subtitle compare="Video"}}{{duration}}{{else}}{{duration}} Foto{{/eq}}</div>
+			</div>
+		</div>
+	{{/gte}}
+	{{else}}
+	{{/gte}}
+	{{/each}}
+	</div>
+</div>

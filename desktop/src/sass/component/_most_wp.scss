@@ -1,0 +1,44 @@
+.most {
+	position: relative;
+	&__list {
+		position: relative;
+		padding-left: 60px;
+		margin-bottom: 1px;
+		height: 100px;
+		background: #F1F1F1;
+		@include transition(all .2s ease);
+		&:hover {
+			background: darken(#F1F1F1, 4%);
+		}
+	}
+	&__count {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 60px;
+		height: 100%;
+		background: $color-kcm-blue-light;
+		padding: 15px 0;
+		text-align: center;
+		// letter-spacing: -5px;
+		border-right: 1px solid #fff;
+		@include font-pack(false, 36px, 700, 1, #fff);
+	}
+	&__title {
+		padding: 0 10px;
+		@include font-pack(false, 16px, 300, false, false);
+		overflow: hidden;
+		height: 62px;
+		margin: 11px 0 5px;
+	}
+	&__link {
+		color: inherit;
+		&:hover {
+			color: #000;
+		}
+	}
+	&__read {
+		padding: 0 10px;
+		@include font-pack(false, 11px, 500, 1, #9b9b9b);
+	}
+}

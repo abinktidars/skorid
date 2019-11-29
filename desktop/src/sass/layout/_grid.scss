@@ -1,0 +1,41 @@
+.clearfix {
+	*zoom: 1;
+	&:after,
+	&:before {
+		display: table;
+		content: "";
+		line-height: 0;
+	}
+	&:after {
+		clear: both;
+	}
+}
+.container {
+	width: $screen-lg-desktop;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: $grid-gutter-width-edge;
+	padding-left: $grid-gutter-width-edge;
+	*zoom: 1;
+	position: relative;
+}
+.col-offset-fluid {
+	margin-right: -$grid-gutter-width-edge;
+	margin-left: -$grid-gutter-width-edge;
+}
+.col-offset-0 {
+	padding-right: 0px;
+	padding-left: 0px;
+}
+.col-offset-center {
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+.o-grid{
+	&-offset{
+		display: flex;
+		margin-right: -15px;
+    	margin-left: -15px;
+	}
+}

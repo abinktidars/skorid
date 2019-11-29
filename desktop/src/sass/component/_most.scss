@@ -1,0 +1,23 @@
+.most {
+	&__list {
+		&--opinion {
+			padding-top: 10px;
+			padding-bottom: 10px;
+			height: auto;
+			.most__title {
+				margin: 5px 0;
+			}
+			.opinion__author {
+				padding: 0 10px;
+			}
+		}
+	}
+}
+
+.trending {
+	&__wrap {
+		.article__grid {
+			margin-bottom: 20px;
+		}
+	}
+}

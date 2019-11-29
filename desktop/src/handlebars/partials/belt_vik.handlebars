@@ -1,0 +1,30 @@
+<div class="pure-g article__wrap__grid--vik mt2">
+	{{#each WP.Vik}}
+	{{#gte @index compare=../index_start}}
+	{{#gte @index compare=../index_end}}
+	{{else}}
+	<div class="pure-u-1 pure-u-md-1-4">
+		<div class="article__grid">
+			{{#eq ads compare=1}}
+			<div class="article__boxsubtitle box--sponsored">
+				<div class="article__subtitle">{{subtitle}}</div>
+			</div>
+			{{/eq}}
+			<div class="article__asset">
+				<a href="{{link}}" target="_blank">
+					<img src="https://asset.kompas.com/crop/0x0:0x0/245x163/data/photo/{{img}}" />
+				</a>
+			</div>
+			<div class="article__box"> 
+				<h4 class="article__title">
+					<a class="article__link" href="{{link}}" target="_blank">{{title}}</a>
+				</h4>
+				<div class="article__lead">{{lead}}</div>
+			</div>
+		</div>
+	</div>
+	{{/gte}}
+	{{else}}
+	{{/gte}}
+	{{/each}}
+</div>

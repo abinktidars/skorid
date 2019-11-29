@@ -1,0 +1,124 @@
+.header {
+	position: relative;
+	background: #000;
+	width: $screen-lg-desktop;
+	z-index: 99;
+	@include min-responsive($screen-lg-desktop) {
+		width: 100%;
+	}
+	&__wrap {
+		padding: 12px 0;
+	}
+	&--sumpah-pemuda {
+		background-repeat: no-repeat;
+		background-position: center 29px;
+		// background: url('');
+	}
+    
+    &--sticky {
+
+    }
+}
+.logo {
+	position: relative;
+	display: inline-block;
+	float: left;
+	a {
+		display: inline-block;
+	}
+	img {
+		width: auto;
+		height: 50px;
+	}
+	span {
+	}
+	&--sticky {
+		display: none;
+	}
+	// &__accelerate {
+	// 	position: relative;
+	// 	float: left;
+	// 	margin: 0 0 0 5px;
+	// 	width: 72px;
+	// 	height: 50px;
+	// 	&__link {
+	// 		position: absolute;
+	// 		right: 0;
+	// 		top: 0;
+	// 		z-index: 1;
+	// 		width: 70px;
+	// 		height: 100%;
+	// 	}
+	// }
+	&__awards {
+		position: relative;
+		float: left;
+		// padding: 0 0 0 10px;
+		width: 70px;
+		height: 50px;
+		// margin-bottom: 0!important;
+		.slick-list {
+			overflow: visible;
+		}
+		.slick-track {
+			// height: 55px;
+		}
+		&__item {
+			width: 70px;
+			position: relative;
+			height: 50px!important;
+		}
+		&__link {
+			position: absolute;
+			left: 10px;
+			top: 0;
+			width: auto;
+			height: 100%;
+		}
+		img {
+			height: 100%;
+		}
+	}
+	&__achieve {
+		position: relative;
+		display: block;
+		padding: 30px 0 0;
+		width: 250px;
+		float: left;
+		text-align: center;
+		&__subtitle {
+			padding: 0 0 5px;
+			color: #fff;
+			font-size: 13px;
+			font-family: $font_body2;
+		}
+		&__item {
+			//width: 100px;
+			display: inline-block;
+			text-align: center;
+			padding: 0;
+			vertical-align: top;
+		}
+		&__img {
+			padding: 5px;
+			img {
+				height: 50px;
+			}
+		}
+		&__link {
+			display: block;
+		}
+		&__title {
+			padding: 2px 0;
+			color: #fff;
+			font-size: 12px;
+			display: block;
+		}
+	}
+	// &__ultah {
+	// 	position: relative;
+	// 	width: 260px;
+	// 	height: 55px;
+	// 	overflow: hidden;
+	// }
+}

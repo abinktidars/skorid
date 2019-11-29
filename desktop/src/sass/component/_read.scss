@@ -1,0 +1,142 @@
+.read {
+	position: relative;
+	&__title {
+		margin: 5px 0;
+		@include font-pack(false, 36px, 500, false, #000);
+	}
+	&__subtitle {
+		margin: 0 0 -10px;
+		padding: 20px 0 0;
+		@include font-pack(false, 20px, 400, false, #6f6f6f);
+		text-transform: uppercase;
+	}
+	&__time {
+		@include font-pack(false, false, 300, false, #BDBABE);
+		padding: 0 0 10px;
+	}
+	&__author {
+		@include font-pack(false, false, 700, false, #000);
+		padding: 0 0 2px;
+		text-transform: uppercase;
+	}
+	&__photo {
+		margin: 0 0 20px;
+	}
+	&__content {
+		padding: 0;
+		@include font-pack(false, 16px, 400, 1.5, #000);
+		//@include font-pack(false, 15px, 400, 1.5, #000);
+		//@include font-pack(false, 16px, 300, 1.5, #000);
+		h2 {
+			@include font-pack(false, 22px, 700, false, false);
+			margin: 30px 0 15px;
+		}
+		h3 {
+			@include font-pack(false, 19px, 700, false, false);
+		}
+		strong {
+			font-weight: 700;
+		}
+		ol, ul {
+			list-style: disc;
+			padding: 0 0 0 30px;
+		}
+		ol {
+			list-style: decimal;
+		}
+		li {
+			list-style: inherit;
+			display: list-item;
+		}
+		iframe {
+			max-width: 100%;
+		}
+		a {
+			color: rgba(51,153,204,1);
+			position: relative;
+			//border-bottom: 1px solid #dfdfdf;
+			// &:after {
+			// 	position: absolute;
+			// 	width: 102%;
+			// 	content: '';
+			// 	border-bottom: 1px solid #dfdfdf;
+			// 	bottom: -2px;
+			// 	left: -1%;
+			// 	@include transition(all 0.2s ease);
+			// }
+			&:hover {
+				color: #000;
+				// border-bottom: 1px solid #666;
+				// &:after {
+				// 	border-bottom: 1px solid #666;
+				// }
+			}
+		}
+		a.inner-link-baca-juga,
+		a.inner-link-tag {
+			color: rgba(51,153,204,1)!important;
+			font-weight: 700;
+			&:hover {
+				color: #000!important;
+			}
+		}
+		table, {
+			table-layout: auto!important;
+		}		
+		table colgroup col,
+		table td,
+		table th, {
+			width: auto!important;
+		}
+	}
+	&__topic {
+		border-top: 1px solid #f0f0f0;
+		padding: 20px 0;
+		margin-top: 20px;
+		&__teaser {
+			@include font-pack(false, 18px, false, false, false);
+		}
+		&__wrap {
+			padding: 10px 0;
+		}
+		&__item {
+			display: block;
+		}
+		&__link {
+			@include font-pack(false, 18px, 700, false, $color-kcm-blue);
+			&:hover {
+				color: #000;
+			}
+		}
+	}
+	&__credit {
+		border-top: 1px solid #f0f0f0;
+		padding: 20px 0;
+		@include font-pack(false, false, false, false, #8c8c8c);
+		&__item {
+			span {
+				display: inline-block;
+				width: 100px;
+				position: relative;
+				vertical-align: top;
+				&:after {
+					content: ':';
+					position: absolute;
+					right: 5px;
+					top: 0;
+				}
+			}
+		}
+		&__logo {
+			display: inline-block;
+			width: 120px;
+			img {
+				width: 100%;
+				padding: 0 0 3px;
+			}
+		}
+	}
+}
+.partner__inline {
+	padding: 0 0 10px;
+}

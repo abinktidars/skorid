@@ -1,0 +1,28 @@
+<div class="highlight ga--highlight mt2 clearfix">
+	<div class="pure-g clearfix">
+		{{#each WP.Sorotan}}
+		{{#gte @index compare=3}}
+		{{else}}
+		<div class="pure-u-1 pure-u-md-1-3">
+			<div class="article__grid">
+				<div class="article__boxsubtitle{{#eq ads compare=1}} box--{{lowercase subtitle}}{{/eq}}">
+					<div class="article__subtitle">{{subtitle}}</div>
+				</div>
+				<div class="article__asset">
+					<a href="{{link}}">
+						<img src="https://asset.kompas.com/crop/0x0:0x0/227x151/data/photo/{{img}}" alt="{{title}}">
+					</a>
+				</div>
+				<div class="article__box"> 
+					<h2 class="article__title">
+						<a href="{{link}}" class="article__link">{{title}}</a>
+					</h2>
+				</div>
+				<!-- option -->
+				{{!> comp_option}}
+			</div>
+		</div>
+		{{/gte}}
+		{{/each}}
+	</div>
+</div>

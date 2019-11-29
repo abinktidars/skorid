@@ -1,0 +1,102 @@
+.form {
+	&__group {
+		margin: 0 0 10px;
+	}
+	&__radio {
+		font-size: 16px;
+		line-height: 1;
+		font-weight: 300;
+		label {
+			cursor: pointer;
+		}
+	}
+	// &__button {
+	// 	display: block;
+	// 	width: auto;
+	// 	height: 40px;
+	// 	padding: 6px 12px;
+	// 	font-size: 14px;
+	// 	line-height: 1.42857143;
+	// 	cursor: pointer;
+	// 	background-color: $color-kcm-blue;
+	// 	color: #fff;
+	// 	font-weight: 700;
+	// }
+	&__input {
+	// 	display: block;
+	// 	width: 100%;
+	// 	height: 40px;
+	// 	padding: 6px 12px;
+	// 	font-size: 14px;
+	// 	line-height: 1.42857143;
+	// 	color: #85949a;
+	// 	background-color: #fff;
+	// 	background-image: none;
+	// 	border: 1px solid $color-kcm-blue;
+	// 	border-radius: 0;
+	// 	@include transition(all .2s ease);
+		&:focus {
+			-webkit-box-shadow: 0px 0px 5px rgba(0,0,0,.2);
+					box-shadow: 0px 0px 5px rgba(0,0,0,.2);
+		}
+	}
+	&__select {
+		&__wrap {
+			position: relative;
+			display: inline-block;
+			&:after {
+				content: '';
+				position: absolute;
+				top: 13px;
+				right: 28px;
+				width: 10px;
+				height: 10px;
+				border-left: 2px solid $color-kcm-blue;
+				border-bottom: 2px solid $color-kcm-blue;
+				-ms-transform: rotate(-45deg);
+				-webkit-transform: rotate(-45deg); 
+				transform: rotate(-45deg);
+				// z-index: 0;
+				z-index: -1;
+			}
+		}
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		-webkit-border-radius: 0px;
+		outline: 0;
+		cursor: pointer;
+		display: block;
+		width: 100%;
+		height: 40px;
+		padding: 6px 12px;
+		background-color: transparent;
+		background-image: none;
+		border: 1px solid $color-kcm-blue;
+		border-radius: 0;
+		@include transition(all .2s ease);
+		@include font-pack(false, false, 600, 1.42857143, $color-kcm-blue);
+	}
+	&__textarea {
+		outline: 0;
+		min-height: 100px;
+		max-width: 100%;
+		display: block;
+		width: 100%;
+		padding: 12px;
+		font-size: 14px;
+		line-height: 1.42857143;
+		color: #85949a;
+		background-color: #fff;
+		background-image: none;
+		border: 1px solid $color-kcm-blue;
+		// border-radius: 4px;
+		@include transition(all .2s ease);
+		&:focus {
+			// border: 1px solid darken($color-kcm-blue, 10%);
+			-webkit-box-shadow: 0px 0px 5px rgba(0,0,0,.2);
+					box-shadow: 0px 0px 5px rgba(0,0,0,.2);
+		}
+	}
+}

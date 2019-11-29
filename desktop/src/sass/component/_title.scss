@@ -1,0 +1,87 @@
+.title {
+	position: relative;
+	border-bottom: 1px solid #9B9B9B;
+	&--clean {
+		border-bottom: 1px solid transparent;
+	}
+	&--center {
+		text-align: center;
+	}
+	&--big {
+		@include font-pack($font_body2, 40px, 300, false, $color_kcm_orange);
+		border-bottom: 1px solid transparent;
+		text-transform: uppercase;
+	}
+	&__content {
+		position: relative;
+		display: inline-block;
+		text-transform: uppercase;
+		padding: 10px 0;
+		@include font-pack($font_body2, 20px, 700, false, #4a4a4a);
+		&:after {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 101%;
+			border-bottom: 5px solid $color_kcm_blue;
+		}
+        
+        &--logo {
+            padding: 0px 0 10px;
+            
+            img {
+                height: 50px;
+            }
+        }
+	}
+	&__teaser {
+		margin: 20px 0 10px;
+		padding: 0 15px;
+		border-left: 10px solid $color_kcm_orange;
+		font-size: 16px;
+		font-weight: 300;
+		color: #000;
+	}
+	&--big,
+	&--clean {
+		.title__content:after {
+			border-bottom: transparent;
+		}
+	}
+	&--center {
+		&:after {
+			content: '';
+			position: absolute;
+			left: 33.3333333%;
+			bottom: 0;
+			width: 33.3333333%;
+			border-bottom: 5px solid $color_kcm_blue;
+		}
+		.title__content:after {
+			border-bottom: transparent;
+		}
+	}
+	&--flex{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__partner {
+		position: relative;
+		float: right;
+		padding: 20px 0 0;
+		span {
+			display: inline-block;
+			padding: 10px 5px 0;
+			@include font-pack($font_body, 13px, false, false, #c3c3c3);
+		}
+		a {
+			display: inline-block;
+		}
+		img {
+			height: 35px;
+			width: auto;
+		}
+	}
+}

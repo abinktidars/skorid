@@ -1,0 +1,72 @@
+.skeleton {
+	&-opinion {
+		&__asset {
+			width: 100px;
+			height: 100px;
+			overflow: hidden;
+			border-radius: 50px;
+			position: absolute;
+			left: 0;
+			top: 15px;
+			z-index: 1;
+			overflow: hidden;
+			background: #f0f0f0;
+			&:after {
+				content: "";
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				animation: progress 2s ease-in-out infinite;
+				@include linier_gradient_3(#f0f0f0, lighten(#000, 88%), 95deg);
+			}
+		}
+		&__author {
+			width: 200px;
+			height: 25px;
+			margin: 0 0 5px;
+			overflow: hidden;
+			position: relative;
+			background: #f0f0f0;
+			&:after {
+				content: "";
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				animation: progress 2s ease-in-out infinite;
+				@include linier_gradient_3(#f0f0f0, lighten(#000, 88%), 95deg);
+			}
+		}
+		&__authortitle {
+			width: 150px;
+			height: 15px;
+			margin: 0 0 13px;
+			overflow: hidden;
+			position: relative;
+			background: #f0f0f0;
+			&:after {
+				content: "";
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				animation: progress 2s ease-in-out infinite;
+				@include linier_gradient_3(#f0f0f0, lighten(#000, 88%), 95deg);
+			}
+		}
+		&__authorprofile {
+			width: 500px;
+			height: 12px;
+			margin: 0 0 5px;
+			overflow: hidden;
+			position: relative;
+			background: #f0f0f0;
+			&:after {
+				content: "";
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				animation: progress 2s ease-in-out infinite;
+				@include linier_gradient_3(#f0f0f0, lighten(#000, 88%), 95deg);
+			}
+		}
+	}
+}

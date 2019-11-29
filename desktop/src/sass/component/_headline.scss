@@ -1,0 +1,122 @@
+.headline {
+	position: relative;
+	background: #000;
+	color: #fff;
+	border-radius: 10px;
+	&__belt{
+		
+		position: absolute;
+		background: black;
+		width: 100%;
+		height: 97vh;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
+	&__subtitle {
+		position: absolute;
+		left: 0;
+		top: 30px;
+		z-index: 1;
+		background: #fff;
+		text-transform: uppercase;
+		padding: 10px;
+		@include font-pack($font-title, 12px, 700, false, $color-kcm-blue-light);
+	}
+	&__big {
+		position: relative;
+		overflow: hidden;
+		// width: 100%;
+		height: 600px;
+		&__row {
+			position: relative;
+		}
+		&__item {
+			display: block;
+		}
+		&__link {
+			display: block;
+			&:hover {
+				color: #fff;
+			}
+		}
+		&__img {
+			width: 780px;
+			// height: 375px;
+			height: 600px;
+			overflow: hidden;
+			position: relative;
+			img{
+				filter: brightness(0.8);
+			}
+		}
+		&__box {
+			position: absolute;
+			bottom: 145px;
+			left: 0;
+			width: 100%;
+			padding: 20px 0;
+		}
+		&__title {
+			@include font-pack($font-title, 40px, 300, 1.1, false);
+			padding: 0 20px;
+			margin: 0 0 10px;
+			// @include title_overflow(auto, 82px);
+		}
+		&__date {
+			padding: 0 20px;
+			@include font-pack($font-title, 12px, 600, false, #9B9B9B);
+		}
+	}
+	&__thumb {
+		position: absolute;
+		bottom: 0px;
+		left: 0;
+		overflow: hidden;
+		// width: 100%;
+		height: 145px;
+		&__row {
+			position: relative;
+			// margin: 0 -10px;
+			margin: 0;
+			overflow: hidden;
+		}
+		&__item {
+			padding: 0 10px;
+			// width: 192.4444px!important;
+			width: 190px;
+			outline: 0;
+			&.slick-current .headline__thumb__link:after {
+				content: '';
+				position: absolute;
+				z-index: 1;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				border-top: 4px solid $color-kcm-blue;
+				border-radius: 5px;
+			}
+		}
+		&__img {
+			margin: 0 0 5px;
+			position: relative;
+			cursor: pointer;
+			border-radius: 10px;
+			overflow: hidden;
+			img{
+				border-radius: 5px;
+			}
+		}
+		&__title {
+			@include font-pack($font-title, 12px, 400, false, false);
+			@include title_overflow(45px, 45px);
+			padding: 0 6px 6px;
+		}
+		&__link {
+			position: absolute;
+			bottom: 0;
+			display: block;
+			padding-bottom: 10px;
+		}
+	}
+}

@@ -1,0 +1,28 @@
+<!-- promo folding screen wp -->
+{{!> addon_fold_wp}}
+	
+<!-- ultah -->
+{{!> addon_ultah}}
+	
+<!-- pemilu_damai -->
+{{!> addon_pemilu_damai}}
+<script src="./asset/js/jquery-1.12.0.min.js"></script>
+<script src="./asset/js/slick.min.js"></script>
+<script src="./asset/js/jquery.sticky-kit.min.js"></script>
+<script src="./asset/js/main.min.js"></script>
+<script src="./asset/js/jquery.marquee.min.js"></script>
+<script src="./asset/js/jquery.lazyload.min.js"></script>
+<script src="./asset/js/svgxuse-wp.js"></script>
+<script src="./asset/js/jquery.magnific-popup.min.js"></script>
+<script src="./asset/js/main-sso.js"></script>
+{{#eq page compare="wp"}}
+{{else}}
+<script src="./asset/js/bootstrap-datepicker.min.js"></script>
+<script src="./asset/js/photoswipe.min.js"></script>
+<script src="./asset/js/photoswipe-ui-default.min.js"></script>
+<script src="./asset/js/main-article.js"></script>
+<script src="./asset/js/main-art.js"></script>
+{{/eq}}
+{{#eq page compare="images"}}
+<script src="./asset/js/main-lensa.js"></script>
+{{/eq}}

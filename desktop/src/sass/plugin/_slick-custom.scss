@@ -1,0 +1,38 @@
+
+// headline
+.headline__big .slick-slider {
+	margin-bottom: 0px;
+}
+.headline__thumb .slick-slider {
+	margin-bottom: 15px;
+}
+
+// photo wp
+.article__photo__wrap {
+	.slick-slider {
+		margin-bottom: 10px;
+	}
+	.slick-dots {
+		// text-align: right;
+		top: -35px;
+		bottom: auto;
+		width: 20%;
+		left: 40%;
+	}
+	// .slick-dots li {
+	// 	width: 20px;
+	// 	height: 20px;
+	// }
+	.slick-dots li button {
+		width: 10px;
+		height: 10px;
+		background: #ccc;
+		border-radius: 20px;
+	}
+	.slick-dots li.slick-active button {
+		background: $color-kcm-orange-light;
+	}
+	.slick-dots li button:before {
+		content: '';
+	}
+}
