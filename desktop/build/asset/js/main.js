@@ -42,12 +42,12 @@ $(document).ready(function() {
             $('.js-nav-offset').css({
                 'padding-top': navsticky,
             });
-            $('.js-kcm-stick').addClass('kcm__stick--sticky')
+            $('.js-kcm-stick').addClass('ads__stick--sticky')
         } else {
             $('.header').removeClass('header--sticky');            
             $('.nav').removeClass('nav--sticky');
             $('.js-nav-offset').removeAttr('style');
-            $('.js-kcm-stick').removeClass('kcm__stick--sticky')
+            $('.js-kcm-stick').removeClass('ads__stick--sticky')
         }
 
         // banner sticky
@@ -92,7 +92,7 @@ $(document).ready(function() {
     $('.js-kcm-horizontal').click(function(e) {
         e.stopPropagation();
         e.preventDefault();
-        $('.kcm__horizontal').hide();
+        $('.ads__horizontal').hide();
     });
 
     // video click

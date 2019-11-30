@@ -2,14 +2,9 @@
 // base sass, mixin + variable
 @import 'base/vars';
 @import 'base/mixin/mixin';
-@import 'base/mixin/tools-mediaqueries';
-@import 'base/mixin/utilities-visibility';
-@import 'base/mixin/objects-grid';
 
 // plugin
-// @import 'plugin/blaze-grid';
-// @import 'plugin/blaze-grid-responsive';
-@import 'plugin/pure-grid';
+@import 'plugin/pure-grid'; // kalo mau nambahin grid disini
 @import 'plugin/slick';
 @import 'plugin/slick-theme';
 @import 'plugin/slick-custom';
@@ -21,27 +16,15 @@
 @import 'layout/footer';
 
 // components
-@import 'component/kcm_network';
 @import 'component/nav';
 @import 'component/search';
-@import 'component/sso';
-@import 'component/kompasid';
-@import 'component/form_wp';
 @import 'component/title';
 @import 'component/headline';
 @import 'component/article';
-@import 'component/most_wp';
-@import 'component/opinion_wp';
-@import 'component/video';
+@import 'component/most';
 @import 'component/button';
-@import 'component/breaking';
-@import 'component/tooltips';
-@import 'component/tag_wp';
-@import 'component/jeo';
-@import 'component/breaking_news_new';
-@import 'component/gramedia';
-@import 'component/social_wp';
-@import 'component/ads_wp';
+@import 'component/social';
+@import 'component/ads';
 @import 'component/latest';
 
 // effects
