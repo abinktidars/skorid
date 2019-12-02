@@ -32,7 +32,7 @@
 		</div>
 		
 		<!-- row highlight -->
-		<div class="pure-g mt2">
+		<div class="pure-g mt3">
 			<div class="pure-u-1 pure-u-md-7-10">
 				
 				{{> editor}}
@@ -47,12 +47,15 @@
 			</div>
 			<div class="pure-u-1 pure-u-md-3-10">
 				
+				<!-- terpopuler -->
+				{{> trending index_start=0 index_end=10 }}
+				{{!-- {{> most index_end=10}} --}}
+
 				<!-- kcm rectangle -->
 				{{> ads type="rectangle"}}
 				
-				<!-- terpopuler -->
-				{{> most index_end=10}}
-				
+				<!-- klasemen -->
+				{{> klasemen }}
 			</div>
 		</div>
 		<!-- kcm horizontal -->
