@@ -22,14 +22,6 @@
 				&>div {
 					height: 290px;
 				}
-
-				// .article__grid {
-				// 	height: 100%;
-				// 	border-bottom: 1px solid #dfdfdf;
-				// }
-				// .article__box {
-				// 	padding: 10px 10px 0 10px;
-				// }
 				.article__lead {
 					@include title_overflow(auto, 85px);
 				}
@@ -37,26 +29,6 @@
 				.article__title {
 					@include title_overflow(65px, 65px);
 					// margin: 0;
-				}
-			}
-
-			&--vik {
-				&>div {
-					height: 325px;
-				}
-
-				.article__grid {
-					height: 100%;
-					border-bottom: 1px solid #dfdfdf;
-				}
-
-				.article__lead {
-					@include title_overflow(auto, 105px);
-					margin: 0;
-				}
-
-				.article__title {
-					@include title_overflow(auto, 45px);
 				}
 			}
 		}
@@ -94,7 +66,8 @@
 
 	&__asset {
 		position: relative;
-		height: 177px;
+		height: 140px;
+		border-radius: 6px;
 
 		img {
 			display: block;
@@ -221,7 +194,7 @@
 		background: #fff;
 
 		&__asset {
-			width: 197px;
+			width: 160px;
 			float: left;
 			padding-right: 20px;
 			background: #fff;
@@ -233,16 +206,12 @@
 			overflow: hidden;
 			padding-bottom: 15px;
 			border-bottom: 1px solid #dfdfdf;
-			// min-height: 125px;
 		}
 
 		&__item {
-			// border-bottom: 1px solid #9B9B9B;
 			margin-bottom: 15px;
-
-			// padding-bottom: 5px;
+			
 			&:last-child {
-				// border-bottom: transparent;
 				margin-bottom: 0;
 			}
 		}
@@ -338,8 +307,6 @@
 				position: absolute;
 				top: 11px;
 				left: 11px;
-				// -webkit-transform: translate(-40%, -50%);
-				// transform: translate(-40%, -50%);
 				border-style: solid;
 				border-width: 3px 0 3px 6px;
 				border-color: transparent transparent transparent #fff;
@@ -410,11 +377,6 @@
 	}
 
 	&__partner {
-		// position: absolute;
-		// bottom: 6px;
-		// left: 0;
-		// width: 100%;
-		// text-align: right;
 		height: 50px;
 		padding: 0 0 5px;
 	}
@@ -442,7 +404,7 @@
 	padding: 20px;
 
 	&__item{
-
+		padding: 10px;
 		width: 250px;
 
 		&__images{
@@ -454,18 +416,22 @@
 		&__title{
 			font-size: 16px;
 			font-weight: 600;
-			font-family: "Poppins", sans-serif;
+			// font-family: "Poppins", sans-serif;
 			padding-top: 10px;
 			border-top: 1px solid #dddddd;
 		}
 	}
 }
 
-.box-white{
+.box{
 	padding: 15px;
 	background: white;
     margin-bottom: 20px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
     border-radius: 0px 0px 5px 5px;
-    border-radius: 0 0 5px 5px;
+	border-radius: 0 0 5px 5px;
+	
+	&--white{
+		background: white;
+	}
 }

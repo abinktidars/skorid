@@ -1,0 +1,65 @@
+
+// trending
+.article-t{
+	&__listtranding{
+		position: relative;
+		// margin: 0 0 15px;
+		background: #fff;
+		&::after{
+			content: '';
+			position: absolute;
+			border-bottom: 1px solid #dfdfdf;
+			width: 50%;
+			bottom: 0;
+			z-index: 1;
+			right: 0;
+		}
+		&__asset{
+			width: 150px;
+			float: left;
+			padding-right: 20px;
+			background: #fff;
+			z-index: 2;
+			position: relative;
+		}
+		&__title{
+			height: 49px;
+			overflow: hidden;
+			margin-bottom: 4px;
+			&--medium{
+				font-size: 26px;
+				line-height: 1.3;
+			}
+		}
+	}
+	&__title{
+		font-size: 14px;
+    font-weight: 300;
+    line-height: 1.2;
+    color: #000;
+    margin: 0 0 10px;
+	}
+	&__link{
+		display: block;
+    	font-family: "Poppins",sans-serif;
+	}
+	&__subtitle{
+		text-transform: uppercase;
+		font-size: 10px;
+		font-weight: 400;
+		line-height: 0.5;
+		&--inline{
+			padding: 0 5px 0 0;
+			display: inline-block;
+			color: #E55225;
+		}
+	}
+	&__date{
+		font-size: 10px;
+		color: #666;
+		margin: 0px 0 5px;
+		display: inline-block;
+		
+	}
+	
+}

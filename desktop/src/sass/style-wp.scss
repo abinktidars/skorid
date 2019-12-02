@@ -1,4 +1,3 @@
-
 // base sass, mixin + variable
 @import 'base/vars';
 @import 'base/mixin/mixin';
@@ -26,6 +25,8 @@
 @import 'component/social';
 @import 'component/ads';
 @import 'component/latest';
+@import 'component/trending';
+@import 'component/klasemen';
 
 // effects
 @import 'module/override';
