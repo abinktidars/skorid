@@ -1,21 +1,3 @@
-{{!--
-
-Variable page adalah variable global yang membedakan render antara halaman WP dengan halaman lainnya. 
-Jika varible tersebut tidak diisi, maka treatment include asset (css/js/dll) akan default seperti kanal.
-Pilihan halaman yang tersedia sampai saat ini adalah :
-
-page="wp" 				halaman wp
-page="news"				halaman kanal, bisa di isi dengan nama kanal, misalnya news, ekonomi, tekno, dll.
-page="inside"			halaman inside kompascom, misalnya about us, jobs, dll
-page="inside-detail"	halaman detail inside kompascom, misalnya pedoman siber, policy, dll
-page="404"				halaman 404
-page="suratpembaca"		halaman surat pembaca
-
-Lihat Artwork
-Klik artwork untuk melihat profil artist.
-
---}} 
-
 <!DOCTYPE html>
 <html lang="en">
 	{{> head page="wp"}}
@@ -52,6 +34,8 @@ Klik artwork untuk melihat profil artist.
 		<!-- row highlight -->
 		<div class="pure-g mt2">
 			<div class="pure-u-1 pure-u-md-7-10">
+				
+				{{> editor}}
 
 				<!-- terkini -->
 				<div class="title clearfix">
