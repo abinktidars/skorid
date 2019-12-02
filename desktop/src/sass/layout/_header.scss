@@ -1,6 +1,7 @@
 .header {
 	position: relative;
 	background: #000;
+	border-bottom: 1px solid #2E2E2E;
 	width: $screen-lg-desktop;
 	z-index: 99;
 	@include min-responsive($screen-lg-desktop) {
@@ -8,11 +9,6 @@
 	}
 	&__wrap {
 		padding: 12px 0;
-	}
-	&--sumpah-pemuda {
-		background-repeat: no-repeat;
-		background-position: center 29px;
-		// background: url('');
 	}
     
     &--sticky {
@@ -35,21 +31,6 @@
 	&--sticky {
 		display: none;
 	}
-	// &__accelerate {
-	// 	position: relative;
-	// 	float: left;
-	// 	margin: 0 0 0 5px;
-	// 	width: 72px;
-	// 	height: 50px;
-	// 	&__link {
-	// 		position: absolute;
-	// 		right: 0;
-	// 		top: 0;
-	// 		z-index: 1;
-	// 		width: 70px;
-	// 		height: 100%;
-	// 	}
-	// }
 	&__awards {
 		position: relative;
 		float: left;
@@ -115,10 +96,4 @@
 			display: block;
 		}
 	}
-	// &__ultah {
-	// 	position: relative;
-	// 	width: 260px;
-	// 	height: 55px;
-	// 	overflow: hidden;
-	// }
 }
