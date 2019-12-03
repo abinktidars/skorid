@@ -1,41 +1,40 @@
-<div class="latest ga--latest clearfix">
-	{{!indeks}}
-	{{!#withFirst Latest 10}}
-	{{#each WP.Latest}}
-	{{#gte @index compare=../index_start}}
-	{{#gte @index compare=../index_end}}
-	{{else}}
-	<div class="article__list {{#eq subtitle compare="MOTO GP"}}kcm__list__stickyy {{/eq}}clearfix">
-		<div class="article__list__asset clearfix">
-			{{#if duration}}
-			<div class="article__time article__time--fixed">{{duration}}</div>
-			{{/if}}
-			{{#eq @index compare=1}}
-			{{/eq}}
-			<div class="article__asset">
-				<a href="{{link}}">	
-					<img src="https://asset.kompas.com/crop/0x0:0x0/215x215/data/photo/{{img}}" alt="{{title}}" />
-				</a>
-			</div>
+{{!indeks}}
+{{!#withFirst Latest 10}}
+{{#each WP.Latest}}
+{{#gte @index compare=../index_start}}
+{{#gte @index compare=../index_end}}
+{{else}}
+<div class="article__list {{#eq subtitle compare="MOTO GP"}}kcm__list__stickyy {{/eq}}clearfix">
+	<div class="article__list__asset clearfix">
+		{{#if duration}}
+		<div class="article__time article__time--fixed">{{duration}}</div>
+		{{/if}}
+		{{#eq @index compare=1}}
+		{{/eq}}
+		<div class="article__asset">
+			<a href="{{link}}">	
+				<img src="https://asset.kompas.com/crop/0x0:0x0/215x215/data/photo/{{img}}" alt="{{title}}" />
+			</a>
 		</div>
-		<div class="article__list__info">
-			<a href="#" class="article__subtitle button--default article__subtitle--inline">{{subtitle}}</a>
-			<div class="article__date">2 Menit yang Lalu</div>
-		</div>
-		<div class="article__list__title">
-			<h3 class="article__title article__title--medium">
-				<a class="article__link" href="{{link}}">{{title}}</a>
-			</h3>
-			<p class="article__lead">
-				Menghadapi megabintang Barcelona, Lionel Messi, dan megabintang Juventus, Cristiano Ronaldo, dalam tempo empat hari membuat bek termahal Inter Milan tahu siapa sosok terhebat
-			</p>
-		</div>
-		<!-- option -->
-		{{!> comp_option}}
-		<div class="clearfix"></div>
 	</div>
-	{{/gte}}
-	{{else}}
-	{{/gte}}
-	{{/each}}
+	<div class="article__list__info">
+		<a href="#" class="article__subtitle button--default article__subtitle--inline">{{subtitle}}</a>
+		<div class="article__date">2 Menit yang Lalu</div>
+	</div>
+	<div class="article__list__title">
+		<h3 class="article__title article__title--medium">
+			<a class="article__link" href="{{link}}">{{title}}</a>
+		</h3>
+		<p class="article__lead">
+			Menghadapi megabintang Barcelona, Lionel Messi, dan megabintang Juventus, Cristiano Ronaldo, dalam tempo empat hari membuat bek termahal Inter Milan tahu siapa sosok terhebat
+		</p>
+	</div>
+	<!-- option -->
+	{{!> comp_option}}
+	<div class="clearfix"></div>
 </div>
+{{/gte}}
+{{else}}
+{{/gte}}
+{{/each}}
+

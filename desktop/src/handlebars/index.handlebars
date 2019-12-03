@@ -39,10 +39,12 @@
 
 				<!-- terkini -->
 				<div class="title clearfix">
-					<div class="title__content">Berita Terkini</div>
+					<div class="title__content">latest</div>
 					<a class="button button--default button--right" href="indeks-berita.html">Lihat Semua</a>
 				</div>
-				{{> latest total=10 index_start=0 index_end=8}}
+				<div class="latest ga--latest clearfix">
+					{{> latest total=10 index_start=0 index_end=8}}
+				</div>
 				
 			</div>
 			<div class="pure-u-1 pure-u-md-3-10">
@@ -54,7 +56,9 @@
 				{{> ads type="rectangle"}}
 				
 				<!-- klasemen -->
-				{{> klasemen }}
+				<div class="klasemen mt2 rad">
+					{{> klasemen }}
+				</div>
 			</div>
 		</div>
 
@@ -98,8 +102,50 @@
 			</div>
 		</div> 
 
-		<!-- kcm horizontal -->
-		{{!> ads type="horizontal"}}
+		<!-- row latest klasemen --> 
+		<div class="pure-g mt3">
+			<div class="pure-u-1 pure-u-md-7-10">
+				<div class="latest rad-all clearfix">
+					{{> latest total=10 index_start=0 index_end=4}}				
+				</div>
+			</div>
+			<div class="pure-u-1 pure-u-md-3-10">				
+				<!-- klasemen -->
+				<div class="klasemen">
+					{{> klasemen }}
+				</div>
+			</div>
+		</div>
+
+		<!-- row video -->
+		<div class="title mt2 clearfix">
+			<div class="title__content">Video Pilihan</div>
+			<a class="button button--default button--right" href="indeks-berita.html">Lihat Semua</a>
+		</div>
+		<div class="box">
+			
+		</div>
+
+		<!--Row Gallery Photo-->
+		<div class="pure-g mt3">
+			<div class="pure-u-1 pure-u-md-7-10">
+
+				<!-- Latest Feed -->
+				<div class="latest ga--latest clearfix">
+					{{> latest total=10 index_start=0 index_end=3}}
+				</div>		
+
+				<!--Foto Pilihan-->
+				<div class="title mt2 clearfix">
+					<div class="title__content">Foto Pilihan</div>
+					<a class="button button--default button--right" href="indeks-berita.html">Lihat Semua</a>
+				</div>	
+			</div>
+			<div class="pure-u-1 pure-u-md-3-10">
+				<!-- kcm rectangle -->
+				{{> ads type="rectangle"}}
+			</div>
+		</div>
 
 	</div>
 
