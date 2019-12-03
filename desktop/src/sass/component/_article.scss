@@ -394,9 +394,10 @@
 	}
 }
 
+// Editor Picks
 .featured {
     min-height: 295px;
-    background: white;
+    background: #ffffff;
     margin-bottom: 20px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
     border-radius: 0px 0px 5px 5px;
@@ -433,5 +434,65 @@
 	
 	&--white{
 		background: white;
+	}
+}
+
+// Liga 
+.liga{
+
+	.article{
+
+		&__list{
+
+			padding: 20px 20px 0px;
+
+			&:last-child{
+				padding-bottom: 20px;
+			}
+
+			&__asset{
+				width: 100px;
+			}
+
+			&__title{
+				padding-bottom: 10px;			
+			}
+		}
+
+		&__asset{
+			height: 90px;
+		}
+
+		&__title{
+
+			&--medium{
+				height: 52px;
+				font-size: 13px;
+				font-weight: 500;
+			}
+		}
+
+		&__date{
+			margin: 0px;
+		}
+	}
+
+	.title{
+
+		background: none;
+
+		.button--right{
+			transform: translateY(16px);
+		}
+
+		&__epl{
+			background: #3F1052;	
+		}
+		&__indo{
+			background: #8F001F;	
+		}
+		&__spanyol{
+			background: #0E3672;	
+		}
 	}
 }

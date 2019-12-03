@@ -1,0 +1,32 @@
+{{!-- {{> latest total=5 index_start=0 index_end=3}} --}}
+<div class="liga__thumbnail">
+    <img src="asset/images/lampard.jpg" alt="">
+</div>
+
+{{!indeks}}
+{{!#withFirst Latest 10}}
+{{#each WP.Latest}}
+{{#gte @index compare=../index_start}}
+{{#gte @index compare=../index_end}}
+{{else}}
+<div class="article__list">
+    <div class="article__list__asset clearfix">
+        <div class="article__asset">
+            <a href="">	
+                <img src="asset/images/lampard.jpg" alt="{{title}}" />
+            </a>
+        </div>
+    </div>
+    <div class="article__list__title">
+        <h3 class="article__title article__title--medium">
+            <a class="article__link" href="">2 Tahun Lagi, Chelsea Bisa Jadi Kandidat Kuat Juara Liga Inggris </a>
+        </h3>
+        <div class="article__list__info">
+            <div class="article__date">2 Menit yang Lalu</div>
+        </div>
+    </div>
+</div>
+{{/gte}}
+{{else}}
+{{/gte}}
+{{/each}}
