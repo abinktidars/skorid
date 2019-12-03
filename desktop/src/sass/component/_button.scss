@@ -4,6 +4,10 @@
 		float: right;
 		transform: translateY(10px);
 	}
+	&--left{
+		float: left;
+		transform: translateY(10px);
+	}
 	&--default {
 		position: relative;
 		display: inline-block;

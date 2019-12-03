@@ -42,14 +42,13 @@
 					<div class="title__content">Berita Terkini</div>
 					<a class="button button--default button--right" href="indeks-berita.html">Lihat Semua</a>
 				</div>
-				{{> latest total=5 index_start=0 index_end=5}}
+				{{> latest total=10 index_start=0 index_end=8}}
 				
 			</div>
 			<div class="pure-u-1 pure-u-md-3-10">
 				
 				<!-- terpopuler -->
-				{{> trending index_start=0 index_end=10 }}
-				{{!-- {{> most index_end=10}} --}}
+				{{> trending index_start=0 index_end=7 }}
 
 				<!-- kcm rectangle -->
 				{{> ads type="rectangle"}}
@@ -58,6 +57,47 @@
 				{{> klasemen }}
 			</div>
 		</div>
+
+		<!-- row liga-->
+		<div class="pure-g mt3">
+			<div class="pure-u-md-1-3 liga">
+				<div class="title title__epl">
+					<a href="" class="button--left">
+						<img src="asset/images/icon/epl.png" alt="">
+					</a>
+					<div class="title title__sub title--center">Liga Inggris</div>
+					<a href="" class="button--right">
+						<img src="asset/images/icon/arrow-right.svg" alt="">
+					</a>
+				</div>
+				{{> liga index_start=0 index_end=3}}
+			</div>
+			<div class="pure-u-md-1-3 liga">
+				<div class="title title__indo">
+					<a href="" class="button--left">
+						<img src="asset/images/icon/liga1.png" alt="">
+					</a>
+					<div class="title title__sub title--center">Liga Indonesia</div>
+					<a href="" class="button--right">
+						<img src="asset/images/icon/arrow-right.svg" alt="">
+					</a>
+				</div>
+				{{> liga index_start=0 index_end=3}}
+			</div>
+			<div class="pure-u-md-1-3 liga liga__spanyol">
+				<div class="title title__spanyol">
+					<a href="" class="button--left">
+						<img src="asset/images/icon/laliga.png" alt="">
+					</a>
+					<div class="title title__sub title--center">Liga Spanyol</div>
+					<a href="" class="button--right">
+						<img src="asset/images/icon/arrow-right.svg" alt="">
+					</a>
+				</div>
+				{{> liga index_start=0 index_end=3}}
+			</div>
+		</div> 
+
 		<!-- kcm horizontal -->
 		{{!> ads type="horizontal"}}
 
