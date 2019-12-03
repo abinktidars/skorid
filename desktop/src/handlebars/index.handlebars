@@ -1,21 +1,3 @@
-{{!--
-
-Variable page adalah variable global yang membedakan render antara halaman WP dengan halaman lainnya. 
-Jika varible tersebut tidak diisi, maka treatment include asset (css/js/dll) akan default seperti kanal.
-Pilihan halaman yang tersedia sampai saat ini adalah :
-
-page="wp" 				halaman wp
-page="news"				halaman kanal, bisa di isi dengan nama kanal, misalnya news, ekonomi, tekno, dll.
-page="inside"			halaman inside kompascom, misalnya about us, jobs, dll
-page="inside-detail"	halaman detail inside kompascom, misalnya pedoman siber, policy, dll
-page="404"				halaman 404
-page="suratpembaca"		halaman surat pembaca
-
-Lihat Artwork
-Klik artwork untuk melihat profil artist.
-
---}} 
-
 <!DOCTYPE html>
 <html lang="en">
 	{{> head page="wp"}}
@@ -25,13 +7,13 @@ Klik artwork untuk melihat profil artist.
 	{{> header page="wp"}}
 
 	<!-- ads skin -->
-	{{> ads_skin}}
+	{{> ads type="skin"}}
 	<div class="headline__belt"></div>
 	<!-- container -->
 	<div class="container clearfix z1">
 
 		<!-- ads top -->
-		{{> ads_top}}
+		{{> ads type="top"}}
 		
 		<!-- row headline -->
 		<div class="pure-g mt2">
@@ -44,40 +26,80 @@ Klik artwork untuk melihat profil artist.
 			<div class="pure-u-1 pure-u-md-3-10">
 			
 				<!-- ads giant -->
-				{{> ads_giant}}
+				{{> ads type="giant"}}
 				
 			</div>
 		</div>
 		
 		<!-- row highlight -->
-		<div class="pure-g mt2">
+		<div class="pure-g mt3">
 			<div class="pure-u-1 pure-u-md-7-10">
+				
+				{{> editor}}
 
 				<!-- terkini -->
 				<div class="title clearfix">
 					<div class="title__content">Berita Terkini</div>
 					<a class="button button--default button--right" href="indeks-berita.html">Lihat Semua</a>
 				</div>
-				{{> latest total=5 index_start=0 index_end=5}}
+				{{> latest total=10 index_start=0 index_end=8}}
 				
 			</div>
 			<div class="pure-u-1 pure-u-md-3-10">
-			
-				<!-- harian kompas -->
-				<div class="title clearfix title--center">
-					<div class="title__content">Skor.id</div>
-				</div>
-				
-				<!-- kcm rectangle -->
-				{{> ads_rectangle}}
 				
 				<!-- terpopuler -->
-				{{> most index_end=10}}
+				{{> trending index_start=0 index_end=7 }}
+
+				<!-- kcm rectangle -->
+				{{> ads type="rectangle"}}
 				
+				<!-- klasemen -->
+				{{> klasemen }}
 			</div>
 		</div>
+
+		<!-- row liga-->
+		<div class="pure-g mt3">
+			<div class="pure-u-md-1-3 liga">
+				<div class="title title__epl">
+					<a href="" class="button--left">
+						<img src="asset/images/icon/epl.png" alt="">
+					</a>
+					<div class="title title__sub title--center">Liga Inggris</div>
+					<a href="" class="button--right">
+						<img src="asset/images/icon/arrow-right.svg" alt="">
+					</a>
+				</div>
+				{{> liga index_start=0 index_end=3}}
+			</div>
+			<div class="pure-u-md-1-3 liga">
+				<div class="title title__indo">
+					<a href="" class="button--left">
+						<img src="asset/images/icon/liga1.png" alt="">
+					</a>
+					<div class="title title__sub title--center">Liga Indonesia</div>
+					<a href="" class="button--right">
+						<img src="asset/images/icon/arrow-right.svg" alt="">
+					</a>
+				</div>
+				{{> liga index_start=0 index_end=3}}
+			</div>
+			<div class="pure-u-md-1-3 liga liga__spanyol">
+				<div class="title title__spanyol">
+					<a href="" class="button--left">
+						<img src="asset/images/icon/laliga.png" alt="">
+					</a>
+					<div class="title title__sub title--center">Liga Spanyol</div>
+					<a href="" class="button--right">
+						<img src="asset/images/icon/arrow-right.svg" alt="">
+					</a>
+				</div>
+				{{> liga index_start=0 index_end=3}}
+			</div>
+		</div> 
+
 		<!-- kcm horizontal -->
-		{{!> ads_horizontal}}
+		{{!> ads type="horizontal"}}
 
 	</div>
 

@@ -1,0 +1,43 @@
+<div class="trending most ga--most rad clearfix">
+	<div class="title clearfix title--center">
+		<h2 class="title__content">Trending</h2>
+	</div>
+	<div class="most__wrap clearfix">
+		{{#each Most}}
+		{{#gt @index compare=../jumlah}}
+		{{else}}
+		<div class="article-t__listtranding {{#eq subtitle compare="Sponsored by OPPO"}}kcm__list__stickyy {{/eq}}clearfix">
+		<div class="article-t__listtranding__asset clearfix">
+			{{#if duration}}
+			<div class="article-t__time article-t__time--fixed">{{duration}}</div>
+			{{/if}}
+			{{#eq @index compare=1}}
+			<div class="jeo__logo__article"><img src="./asset/images/jeo-logo.png" alt=""></div>
+			{{/eq}}
+			<div class="article-t__asset">
+				<a href="{{link}}">
+					<img src="https://asset.kompas.com/crop/0x0:0x0/177x117/data/photo/{{img}}" alt="{{title}}" />
+				</a>
+			</div>
+		</div>
+		<div class="article-t__listtranding__title">
+			<h3 class="article-t__title article-t__title--medium">
+				<a class="article-t__link" href="{{link}}">{{title}}</a>
+			</h3>
+
+		</div>
+		<div class="article-t__listtranding__info">
+			<div class="article-t__subtitle article-t__subtitle--inline{{#eq ads compare=1}} color--brandzview{{/eq}}">
+				<a href="#">{{subtitle}}</a>
+			</div>
+			<div class="article-t__date">{{dates}}</div>
+		</div>
+
+		<!-- option -->
+		{{!> comp_option}}
+		<div class="clearfix"></div>
+	</div>
+		{{/gt}}
+		{{/each}}
+	</div>
+</div>

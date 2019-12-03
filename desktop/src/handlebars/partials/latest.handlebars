@@ -5,13 +5,12 @@
 	{{#gte @index compare=../index_start}}
 	{{#gte @index compare=../index_end}}
 	{{else}}
-	<div class="article__list {{#eq subtitle compare="Sponsored by OPPO"}}kcm__list__stickyy {{/eq}}clearfix">
+	<div class="article__list {{#eq subtitle compare="MOTO GP"}}kcm__list__stickyy {{/eq}}clearfix">
 		<div class="article__list__asset clearfix">
 			{{#if duration}}
 			<div class="article__time article__time--fixed">{{duration}}</div>
 			{{/if}}
 			{{#eq @index compare=1}}
-			<div class="jeo__logo__article"><img src="./asset/images/jeo-logo.png" alt=""></div>
 			{{/eq}}
 			<div class="article__asset">
 				<a href="{{link}}">	
@@ -20,9 +19,7 @@
 			</div>
 		</div>
 		<div class="article__list__info">
-			<div class="article__subtitle button--default article__subtitle--inline">
-				<a href="#">{{subtitle}}</a>
-			</div>
+			<a href="#" class="article__subtitle button--default article__subtitle--inline">{{subtitle}}</a>
 			<div class="article__date">2 Menit yang Lalu</div>
 		</div>
 		<div class="article__list__title">

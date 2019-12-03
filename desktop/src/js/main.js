@@ -42,12 +42,12 @@ $(document).ready(function() {
             $('.js-nav-offset').css({
                 'padding-top': navsticky,
             });
-            $('.js-kcm-stick').addClass('kcm__stick--sticky')
+            $('.js-ads-stick').addClass('ads__stick--sticky')
         } else {
             $('.header').removeClass('header--sticky');            
             $('.nav').removeClass('nav--sticky');
             $('.js-nav-offset').removeAttr('style');
-            $('.js-kcm-stick').removeClass('kcm__stick--sticky')
+            $('.js-ads-stick').removeClass('ads__stick--sticky')
         }
 
         // banner sticky
@@ -59,8 +59,6 @@ $(document).ready(function() {
                 $('#js-banner-sticky').removeClass("banner--sticky");
             }
         }
-        // console.log(scrollpos);0
-        // console.log(hblock);
     });
 
     // sticky terpopuler
@@ -78,21 +76,11 @@ $(document).ready(function() {
         // $(this).parent().css('position', 'relative');
     });
 
-    // breaking news
-    $('.js-breaking').marquee({
-        pauseOnHover: true,
-        allowCss3Support: false,
-        // delayBeforeStart: 2000,
-        duration: 8000,
-        gap: 100,
-        duplicated: true
-    }); 
-
     // close kcm horizontal
-    $('.js-kcm-horizontal').click(function(e) {
+    $('.js-ads-horizontal').click(function(e) {
         e.stopPropagation();
         e.preventDefault();
-        $('.kcm__horizontal').hide();
+        $('.ads__horizontal').hide();
     });
 
     // video click
@@ -101,48 +89,6 @@ $(document).ready(function() {
         $(this).addClass('video__playlist__link--active');
         $('#video-play').attr('src',$(this).attr('data-video'));        
     });
-
-
-	// tooltips
-	$('[data-type="tooltips"]').each(function() {
-		var sf = $(this).data('text');
-		var sg = $(this).data('placement');
-		$(this).append('<div class="tooltips tooltips--' + sg + '"><span>' + sf + '</span></div>');
-		$(this).on('mouseover', function(e) {
-			e.preventDefault();
-			$(this).find('.tooltips').toggleClass('tooltips--show');
-		});
-		$(this).on('mouseout', function(e) {
-			e.preventDefault();
-			$(this).find('.tooltips').toggleClass('tooltips--show');
-		});
-	});
-
-    // awards
-    if($('.logo__awards').length>0) {
-        $('.logo__awards').slick({
-            autoplay: true,
-            slidesToShow: 1,
-            autoplaySpeed: 5000,
-            pauseOnFocus: true,
-            fade: true,
-            arrows: false,
-            cssEase: 'ease',
-        });
-    }
-
-    // ultah
-    if($('.logo__ultah').length>0) {
-		$('.logo__ultah').slick({
-			autoplay: true,
-			slidesToShow: 1,
-			autoplaySpeed: 2000,
-			pauseOnFocus: true,
-			fade: true,
-			arrows: false,
-			cssEase: 'ease',
-		});
-    }
 
     // Load More
     $('#btn-load-more').click(function(){
@@ -174,5 +120,12 @@ $(document).ready(function() {
     $(document).click(function(e){
         $('.option__wrap').removeClass('active');
     });
+
+     // Pilihan Editor
+     $('.featured').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1
+    })
 
 });
