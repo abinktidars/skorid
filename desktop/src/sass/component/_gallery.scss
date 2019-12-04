@@ -1,0 +1,14 @@
+.photo{
+    position: relative;
+
+    &__item{
+        border-radius: 5px;
+        overflow: hidden;
+        height: 130px;
+        margin-bottom: 10px;
+
+        &--big{
+            height: 270px;
+        }
+    }
+}

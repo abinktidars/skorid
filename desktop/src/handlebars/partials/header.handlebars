@@ -1,6 +1,4 @@
-<div class="header clearfix"
-    {{#eq celebration compare=true}} style="background-image:url('asset/images/kompascom-dirgahayu-indonesia-73.jpg');"
-    {{/eq}}>
+<div class="header clearfix">
     <!-- logo kompascom-->
     <div class="row clearfix header__wrap">
         <div class="container clearfix header__row">
@@ -8,60 +6,22 @@
                 <div class="pure-u-1 pure-u-md-7-10 clearfix">
                     <h1 class="logo">
                         <a href="index.html">
-                            <img src="./asset/images/logo-kompascom-jmd.png" alt="www.kompas.com">
+                            <img src="./asset/images/logo-skoid.png" alt="www.kompas.com">
                         </a>
                     </h1>
                 </div>
                 <div class="pure-u-1 pure-u-md-3-10 clearfix">
                     <form class="search search--header col-bs12-8 col-offset-0"
                         action="https://search.kompas.com/search/">
-                        <input class="form__input form__input__header" id="search" type="text" name="q"
+                        <input class="form__input form__search" id="search" type="text" name="q"
                             placeholder="Search">
                         <input class="form__button form__button__header" type="submit" name="submit">
                         <span class="search--icon">
-                            {{#eq kanal compare=MainMenu_edukasi}}
-                            <span class="icon icon-search-edukasi" title="icon-search-edukasi">
-                            </span>
-                            {{else}}
                             <svg class="icon icon-search" title="icon-search">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use>
                             </svg>
-                            {{/eq}}
                         </span>
                     </form>
-                    <!-- langganan -->
-                    {{#eq kanal compare=MainMenu_edukasi}}
-                    {{else}}
-                    <div class="kid__wrap">
-                        <a target="_blank"
-                            href="https://kompas.id/produk-kategori/harian-kompas/paket-harian-kompas/?utm_source=kompas.com&utm_medium=referral&utm_campaign=Kompas.com%20Header%20Subscribe%20CTA"
-                            class="kid__button">Premium</a>
-                        {{!-- <a target="_blank" href="https://gerai.kompas.id/promosi/pestarakyat2019/?utm_source=external_kompascom&utm_medium=header_button_premium&utm_campaign=pestarakyat2019">
-                            <img src="./asset/images/kompas_promo_desktop.png" alt="">
-                        </a> --}}
-                    </div>
-                    {{/eq}}
-                    <div class="sso__header col-bs12-4">
-                        {{#eq kanal compare=MainMenu_edukasi}}
-                        <ul class="sso__wrap">
-                            <li class="sso__item">
-                                <a id="txt_signin" class="sso__link"
-                                    href="https://sso.kompas.com/login/a29tcGFz/aHR0cDovL3d3dy5rb21wYXMuY29t"><span
-                                        class="icon icon-user"></span></a>
-                            </li>
-                        </ul>
-                        {{else}}
-                        <ul class="sso__wrap">
-                            <li class="sso__item">
-                                <a id="txt_register" class="sso__link" href="#sso_register">Register</a>
-                            </li>
-                            <li class="sso__item">
-                                <a id="txt_signin" class="sso__link"
-                                    href="https://sso.kompas.com/login/a29tcGFz/aHR0cDovL3d3dy5rb21wYXMuY29t">Login</a>
-                            </li>
-                        </ul>
-                        {{/eq}}
-                    </div>
                 </div>
             </div>
         </div>
@@ -71,7 +31,7 @@
     <div class="row clearfix nav">
         <div class="container clearfix nav__wrap">
             <div class="logo logo--sticky">
-                <a href="index.html"> <img src="./asset/images/logo-kompascom-jmd.png" alt="www.kompas.com"></a>
+                <a href="index.html"> <img src="./asset/images/logo-skoid.png" alt="www.kompas.com"></a>
             </div>
             {{#if kanal }}
                 {{> nav active=page kanal=kanal}}
@@ -104,7 +64,3 @@
         {{/eq}}
     </div>
 </div>
-
-{{#eq page compare="Money"}}
-{{> headermoney}}
-{{/eq}}

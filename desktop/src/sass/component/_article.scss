@@ -73,24 +73,6 @@
 			display: block;
 			width: 100%;
 		}
-
-		&--kompasid {
-			margin-bottom: 10px;
-			height: 150px;
-			overflow: hidden;
-			// img {
-			// 	max-width: none;
-			// 	width: auto;
-			// 	height: 100%;
-			// }
-		}
-
-		&--god {
-			width: 100%;
-			height: 163px;
-			background-position: center center;
-			background-size: cover;
-		}
 	}
 
 	&__title {
@@ -130,15 +112,8 @@
 			}
 		}
 
-		// &--opinion {
-		// 	@include font-pack(false, 26px, false, 1.3, false);
-		// 	margin: 0 0 5px;
-		// }
-		&--kompasid {
-			height: 44px;
-			overflow: hidden;
-			// padding: 0 0 10px;
-		}
+
+		
 	}
 
 	&__box {
@@ -146,11 +121,7 @@
 		margin: -20px 10px 0;
 		background: #fff;
 		padding: 10px;
-
-		// &--small {
-		// 	margin: -40px 15px 0;
-		// 	padding: 15px;
-		// }
+		
 		&--medium {
 			margin: -40px 15px 0;
 			padding: 15px;
@@ -260,14 +231,7 @@
 
 		span {
 			@include font-pack(false, 14px, 400, 1, $color-kcm-orange);
-			// padding: 5px;
 			display: inline-block;
-			// border: 1px solid #9b9b9b;
-			// .icon {
-			// 	margin-right: 7px;
-			// 	vertical-align: top;
-			// 	font-size: 12px;
-			// }
 		}
 	}
 
@@ -296,7 +260,6 @@
 				width: 15px;
 				height: 15px;
 				border-radius: 20px;
-				// border: 1px solid #fff;
 				background: $color-kcm-blue;
 				left: 6px;
 				bottom: 6px;
@@ -316,8 +279,6 @@
 
 	&__photo {
 		&__wrap {
-
-			// padding-top: 15px;
 			.icon-photo-slider {
 				position: absolute;
 				color: #fff;
@@ -340,7 +301,6 @@
 
 		&__count {
 			@include font-pack(false, 18px, 700, false, $color-kcm-orange-light);
-			// margin-bottom: 20px;
 		}
 	}
 
@@ -355,6 +315,9 @@
 
 		&:last-child {
 			border-radius: 0 0 5px 5px;
+		}
+		&:first-child {
+			border-radius: 5px 5px 0px 0px;
 		}
 
 		&--tv {
@@ -417,7 +380,6 @@
 		&__title{
 			font-size: 16px;
 			font-weight: 600;
-			// font-family: "Poppins", sans-serif;
 			padding-top: 10px;
 			border-top: 1px solid #dddddd;
 		}
@@ -429,8 +391,7 @@
 	background: white;
     margin-bottom: 20px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 0px 0px 5px 5px;
-	border-radius: 0 0 5px 5px;
+    border-radius: 5px;
 	
 	&--white{
 		background: white;

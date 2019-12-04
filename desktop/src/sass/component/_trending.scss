@@ -3,21 +3,22 @@
 .article-t{
 	&__listtranding{
 		position: relative;
-		// margin: 0 0 15px;
 		background: #fff;
+		padding: 10px;
+
 		&::after{
 			content: '';
 			position: absolute;
 			border-bottom: 1px solid #dfdfdf;
-			width: 50%;
+			width: 100%;
 			bottom: 0;
 			z-index: 1;
 			right: 0;
 		}
 		&__asset{
-			width: 150px;
+			width: 110px;
 			float: left;
-			padding-right: 20px;
+			padding-right: 10px;
 			background: #fff;
 			z-index: 2;
 			position: relative;
@@ -34,10 +35,10 @@
 	}
 	&__title{
 		font-size: 14px;
-    font-weight: 300;
-    line-height: 1.2;
-    color: #000;
-    margin: 0 0 10px;
+		font-weight: 500;
+		line-height: 1.2;
+		color: #000;
+		margin: 0 0 10px;
 	}
 	&__link{
 		display: block;
@@ -59,7 +60,10 @@
 		color: #666;
 		margin: 0px 0 5px;
 		display: inline-block;
-		
+	}
+	&__asset{
+		border-radius: 4px;
+		overflow: hidden;
 	}
 	
 }
